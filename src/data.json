@@ -1,0 +1,26 @@
+{
+	"devices": [
+		{
+			"id": 1,
+			"name": "iPhone",
+			"slug": "iphone",
+			"frame": "device-iphone-x",
+			"icon": "apple-brands.svg"
+		},
+		{
+			"id": 2,
+			"name": "iPad",
+			"slug": "ipad",
+			"frame": "device-ipad-pro",
+			"icon": "apple-brands.svg",
+			"steps": 6
+		},
+		{
+			"id": 3,
+			"name": "Android",
+			"slug": "android",
+			"frame": "device-google-pixel-2-xl",
+			"icon": "android-brands.svg"
+		}
+	]
+}

@@ -1,28 +1,16 @@
 <template>
-	<!-- <div class="container devices">
-		<h1>Devices</h1>
-
-		<div class="row">
-			<div v-bind:key="device.id" v-for="device in devices" class="col-3">
-				<p>{{device.name}}</p>
-				<Device v-bind:device="device" />
-			</div>
-		</div>
-	</div>-->
-
-	<section class="fdb-block devices h-100">
+	<section class="devices">
 		<div class="container">
 			<div class="row align-items-center">
 				<div class="col-12">
-					<!-- <img alt="image" class="fdb-icon" src="./icons/github.svg" /> -->
-					<h1>Design Blocks</h1>
-					<p
-						class="lead"
-					>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+					<h1>E-mail instellen</h1>
+					<p class="lead">
+						U heeft aangegeven dat u de e-mail wil instellen voor {{ email }}<br>
+						Kies hieronder het programma waar u het e-mailadres op wenst in te stellen.
+					</p>
 
-					<div class="row">
+					<div class="row mt-5">
 						<div v-bind:key="device.id" v-for="device in devices" class="col-3">
-							<p>{{device.name}}</p>
 							<Device v-bind:device="device" />
 						</div>
 					</div>
@@ -39,7 +27,7 @@ export default {
 	components: {
 		Device
 	},
-	props: ["devices"]
+	props: ["devices", "email"]
 };
 </script>
 

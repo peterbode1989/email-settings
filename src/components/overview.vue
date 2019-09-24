@@ -1,10 +1,7 @@
 <template>
-	<div id="overview" class="h-100">
-		<!-- <h1>{{email}}</h1>
-		<p>This is a overview area</p>-->
-
-		<Devices v-bind:devices="Devices" />
-	</div>
+	<section id="overview" class="h-100">
+		<Devices v-bind:devices="devices" v-bind:email="email" />
+	</section>
 </template>
 
 <script>
@@ -15,16 +12,12 @@ export default {
 	components: {
 		Devices
 	},
-	data() {
-		return {
-			Devices: [
-				{ id: 1, name: "z", desc: "" },
-				{ id: 2, name: "x", desc: "" },
-				{ id: 3, name: "c", desc: "" }
-			]
-		};
+	computed: {
+		devices() {
+			return this.$root.devices;
+		}
 	},
-	props: ["email", "devices"]
+	props: ["email"]
 };
 </script>
 

@@ -1,9 +1,11 @@
 import Vue from 'vue';
 import Router from 'vue-router';
-import LoginComponent from './components/login.vue';
-import OverviewComponent from './components/overview.vue';
 
 Vue.use(Router);
+
+import LoginComponent from './components/login.vue';
+import OverviewComponent from './components/overview.vue';
+import DetailsComponent from './components/details.vue';
 
 export default new Router({
 	mode: 'history',
@@ -23,6 +25,12 @@ export default new Router({
 			path: '/overview',
 			name: 'overview',
 			component: OverviewComponent,
+			props: true
+		},
+		{
+			path: '/overview/:device',
+			name: 'details',
+			component: DetailsComponent,
 			props: true
 		}
 	]
