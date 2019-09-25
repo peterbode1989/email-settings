@@ -10,7 +10,7 @@
 							<p class="lead">Vul om te beginnen uw e-mailadres in</p>
 
 							<b-form-group class="d-inline-block mt-2 w-50">
-								<b-form-input class="text-center" v-model="input.email" type="email" placeholder="Uw e-mailadres"></b-form-input>
+								<b-form-input class="text-center" v-model="input.email" v-on:keyup.enter="login()" type="email" placeholder="Uw e-mailadres"></b-form-input>
 							</b-form-group>
 
 							
