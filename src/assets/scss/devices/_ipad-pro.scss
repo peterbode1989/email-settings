@@ -15,7 +15,7 @@ $device-spacegray-panel: #222;
 .device-ipad-pro {
 	height: 804px;
 	width: 560px;
-	transform: rotate(90deg);
+	// transform: rotate(90deg);
 
 	.device-frame {
 		background: $device-silver-panel;
@@ -30,11 +30,11 @@ $device-spacegray-panel: #222;
 	.device-content {
 		border-radius: 2px;
 		border: 1px solid #222;
-		height: 510px;
-		width: 680px;
 
-		transform-origin: top left;
-		transform: rotate(-90deg) translateX(-100%);
+		height: 680px;
+		width: 510px;
+		// transform-origin: top left;
+		// transform: rotate(-90deg) translateX(-100%);
 	}
 
 	// Home button

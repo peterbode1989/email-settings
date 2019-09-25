@@ -1,20 +1,20 @@
 <template>
 	<section class="devices">
 		<b-container>
-			<b-row class="align-items-center">
-				<div class="col-12">
+			<b-row align-v="center">
+				<b-col cols="12">
 					<h1>E-mail instellen</h1>
 					<p class="lead">
-						U heeft aangegeven dat u de e-mail wil instellen voor {{ email }}
+						U heeft aangegeven dat u de e-mail wil instellen voor <span class="text-primary" v-b-tooltip.hover title="Uw e-mailadres">{{ this.$route.query.email }}</span>
 						<br />Kies hieronder het programma waar u het e-mailadres op wenst in te stellen.
 					</p>
 
-					<div class="row mt-5">
-						<div v-bind:key="device.id" v-for="device in devices" class="col-3">
-							<Device v-bind:device="device" />
-						</div>
-					</div>
-				</div>
+					<b-row class="mt-5">
+						<b-col cols="4" v-bind:key="device.id" v-for="device in devices">
+							<Device v-bind:device="device" v-bind:email="email" />
+						</b-col>
+					</b-row>
+				</b-col>
 			</b-row>
 		</b-container>
 	</section>
@@ -24,10 +24,10 @@
 import Device from "./device";
 export default {
 	name: "Devices",
+	props: ["devices", "email"],
 	components: {
 		Device
-	},
-	props: ["devices", "email"]
+	}
 };
 </script>
 

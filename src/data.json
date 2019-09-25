@@ -5,20 +5,43 @@
 			"name": "iPhone",
 			"slug": "iphone",
 			"frame": "device-iphone-x",
-			"icon": "apple-brands.svg"
+			"icon": "apple-brands.svg",
+			"tutorial": [
+				{
+					"title": "Stap 1",
+					"desc": "step 1"
+				},
+				{
+					"title": "Stap 2",
+					"desc": "step 2"
+				}
+			]
 		},
 		{
 			"id": 2,
 			"name": "iPad",
 			"slug": "ipad",
-			"frame": "device-ipad-pro",
+			"frame": "device-ipad-pro device-gold",
 			"icon": "apple-brands.svg",
-			"steps": 6
+			"tutorial": [
+				{
+					"title": "Stap 1",
+					"desc": "<p>Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui.</p><p>Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum.</p>"
+				},
+				{
+					"title": "Step 2",
+					"desc": "step 2"
+				},
+				{},
+				{},
+				{},
+				{}
+			]
 		},
 		{
 			"id": 3,
 			"name": "Android",
-			"slug": "android",
+			"slug": "",
 			"frame": "device-google-pixel-2-xl",
 			"icon": "android-brands.svg"
 		}

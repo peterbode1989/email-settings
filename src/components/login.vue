@@ -1,34 +1,27 @@
 <template>
 	<section class="loginForm">
-		<div class="container py-5">
-			<div class="row justify-content-center py-5">
-				<div class="col-12 col-md-10 col-lg-7 text-center">
+		<b-container class="py-5">
+			<b-row align-h="center" align-v="center" class="py-5">
+				<b-col cols="7" class="text-center">
 
-					<div class="card shadow">
-						<div class="card-body">
+					<b-card class="shadow">
+						<b-card-text>
 							<h1>E-mail instellen</h1>
 							<p class="lead">Vul om te beginnen uw e-mailadres in</p>
 
-							<!-- <form autocomplete="off"> -->
-							<div class="form-group">
-								<input
-									type="email"
-									name="email"
-									class="form-control text-center"
-									placeholder="Uw e-mailadres"
-									v-model="input.email"
-								/>
-							</div>
-							<p class="mt-4">
-								<button class="btn btn-primary" type="button" v-on:click="login()">Beginnen</button>
-							</p>
-							<!-- </form> -->
-						</div>
-					</div>
+							<b-form-group class="d-inline-block mt-2 w-50">
+								<b-form-input class="text-center" v-model="input.email" type="email" placeholder="Uw e-mailadres"></b-form-input>
+							</b-form-group>
 
-				</div>
-			</div>
-		</div>
+							
+						</b-card-text>
+
+						<b-button type="button" variant="primary" v-on:click="login()">Beginnen</b-button>
+					</b-card>
+
+				</b-col>
+			</b-row>
+		</b-container>
 	</section>
 </template>
 
@@ -49,7 +42,7 @@ export default {
 					// this.$emit("setEmail", this.input.email);
 					this.$router.replace({
 						name: "overview",
-						params: { email: this.input.email }
+						query: { email: this.input.email }
 					});
 				}
 			} else {

@@ -1,10 +1,41 @@
 .slick-initialized {
+	position: relative;
+
+	> .slick-arrow {
+		position: absolute;
+		bottom: -4em;
+
+		&.slick-prev {
+			left: 0;
+		}
+
+		&.slick-next {
+			right: 0;
+		}
+
+		&.btn-link {
+			padding: 0;
+		}
+
+		&.slick-disabled {
+			pointer-events: none;
+			opacity: 0.65;
+
+			&.btn-primary {
+				color: #fff;
+				background-color: #6d75e5;
+				border-color: #6d75e5;
+			}
+		}
+	}
+
 	> .slick-dots {
 		position: absolute;
 		left: 0;
 		right: 0;
-		bottom: -75px;
+		bottom: -100px;
 		
+		text-align: center;
 		margin: 0;
 		padding: 0;
 

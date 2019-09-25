@@ -9,6 +9,7 @@ import Devices from "./devices";
 
 export default {
 	name: "Overview",
+	props: ["email"],
 	components: {
 		Devices
 	},
@@ -16,8 +17,7 @@ export default {
 		devices() {
 			return this.$root.devices;
 		}
-	},
-	props: ["email"]
+	}
 };
 </script>
 

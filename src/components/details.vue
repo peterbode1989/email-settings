@@ -1,16 +1,34 @@
 <template>
 	<b-container class="details">
-		<b-row>
-			<div class="col-12 text-center">
+		<b-row align-v="center">
+
+			<b-col cols="6">
+				<h1>E-mail instellen</h1>
+				<p class="lead mb-4">
+					Hieronder is een handleiding gemaakt voor het instellen van
+					<span
+						class="text-primary"
+						v-b-tooltip.hover
+						title="Uw e-mailadres"
+					>{{ email }}</span>
+					op de {{ device.name }}.
+				</p>
+
+				<slick class="slider-nav" ref="slick" :options="slickOptionsText">
+					<div v-for="(step, index) in device.tutorial" v-bind:key="index" v-html="'<h3>' + step.title + '</h3>' + step.desc"></div>
+				</slick>
+			</b-col>
+
+			<b-col cols="6">
 				<div class="device" v-bind:class="device.frame">
 					<div class="device-frame">
 						<div class="device-content">
-							<slick ref="slick" :options="slickOptions">
-								<div v-bind:key="i" v-for="i in device.steps">
+							<slick class="slider-for" ref="slick" :options="slickOptionsDevice">
+								<div class="device-actual-content" v-for="(step, index) in device.tutorial" v-bind:key="index">
 									<img
 										class="img-fluid"
-										v-bind:src="'/assets/img/devices/' + device.slug + '/slide-' + i + '.jpg'"
-										alt
+										v-bind:src="'/assets/img/devices/' + device.slug + '/slide-' + (index + 1) + '.jpg'"
+										v-bind:alt="'Stap '+(index + 1)"
 									/>
 								</div>
 							</slick>
@@ -23,20 +41,9 @@
 					<div class="device-power"></div>
 					<div class="device-home"></div>
 				</div>
-			</div>
+			</b-col>
+
 		</b-row>
-		<!-- {{ device.name }}
-		<div class="device" v-bind:class="device.frame">
-			<div class="device-frame">
-				<img class="device-content" src="/assets/img/bg-06.jpg" />
-			</div>
-			<div class="device-stripe"></div>
-			<div class="device-header"></div>
-			<div class="device-sensors"></div>
-			<div class="device-btns"></div>
-			<div class="device-power"></div>
-			<div class="device-home"></div>
-		</div>-->
 	</b-container>
 </template>
 
@@ -44,18 +51,29 @@
 import Slick from "vue-slick";
 export default {
 	name: "Details",
+	props: ["email"],
 	components: {
 		Slick
 	},
 	data() {
 		return {
-			slickOptions: {
+			slickOptionsDevice: {
 				slidesToShow: 1,
 				dots: true,
 				arrows: false,
-				infinite: false
-				// Any other options that can be got from plugin documentation
-			}
+				infinite: false,
+				asNavFor: '.slider-nav'
+			},
+			slickOptionsText: {
+				slidesToShow: 1,
+				dots: false,
+				arrows: true,
+				infinite: false,
+				asNavFor: '.slider-for',
+				fade: true,
+				prevArrow: '<button type="button" class="btn btn-link slick-prev">Vorige stap</button>',
+				nextArrow: '<button type="button" class="btn btn-link slick-next">Volgende stap</button>'
+			},
 		};
 	},
 	computed: {
