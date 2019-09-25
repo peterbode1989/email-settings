@@ -9,7 +9,14 @@
 			"tutorial": [
 				{
 					"title": "Stap 1",
-					"desc": "step 1"
+					"desc": "step 1",
+					"tooltip": [
+						{
+							"x": 19,
+							"y": 48,
+							"title": "Wachtwoorden en accounts"
+						}
+					]
 				},
 				{
 					"title": "Stap 2",

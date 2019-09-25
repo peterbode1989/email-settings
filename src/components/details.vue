@@ -7,8 +7,6 @@
 					Hieronder is een handleiding gemaakt voor het instellen van
 					<span
 						class="text-primary"
-						v-b-tooltip.hover
-						title="Uw e-mailadres"
 					>{{ email }}</span>
 					op de {{ device.name }}.
 				</p>
@@ -37,6 +35,16 @@
 										v-bind:src="'/assets/img/devices/' + device.slug + '/slide-' + (index + 1) + '.jpg'"
 										v-bind:alt="'Stap '+(index + 1)"
 									/>
+									<div v-if="step.tooltip" class="overlay">
+										<div
+											class="overlay-item"
+											v-for="(tip, o) in step.tooltip"
+											v-bind:key="o"
+											v-bind:class="['x-'+tip.x, 'y-'+tip.y]"
+										>
+											<span v-if="tip.title">{{ tip.title }}</span>
+										</div>
+									</div>
 								</div>
 							</slick>
 						</div>
@@ -63,13 +71,6 @@ export default {
 	},
 	data() {
 		return {
-			slickOptionsDevice: {
-				slidesToShow: 1,
-				dots: true,
-				arrows: false,
-				infinite: false,
-				asNavFor: ".slider-nav"
-			},
 			slickOptionsText: {
 				slidesToShow: 1,
 				dots: false,
@@ -82,6 +83,14 @@ export default {
 					'<button type="button" class="btn btn-link slick-prev">Vorige stap</button>',
 				nextArrow:
 					'<button type="button" class="btn btn-link slick-next">Volgende stap</button>'
+			},
+			slickOptionsDevice: {
+				slidesToShow: 1,
+				dots: true,
+				arrows: false,
+				infinite: false,
+				fade: true,
+				asNavFor: ".slider-nav"
 			}
 		};
 	},
