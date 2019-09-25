@@ -25,17 +25,37 @@
 			"icon": "apple-brands.svg",
 			"tutorial": [
 				{
-					"title": "Stap 1",
-					"desc": "<p>Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui.</p><p>Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum.</p>"
+					"title": "Stap 1, open instellingen",
+					"desc": "<p>U dient de app <span class='text-primary'>instellingen</span> te openen.<br>Deze app kunt u herkennen aan de grijze kleur en het tandwiel-icoon.</p>"
 				},
 				{
-					"title": "Step 2",
-					"desc": "step 2"
+					"title": "Step 2, wachtwoorden & accounts",
+					"desc": "<p>U dient aan de linkerkant omlaag te scrollen tot dat u het kopje <span class='text-primary'>wachtwoorden en accounts</span> tegenkomt. Klik hierop. </p><p>Vervolgens dient u te kiezen voor de optie <span class='text-primary'>nieuwe account</span>. Dit vind u in de rechter kolom nadat u op <span class='text-primary'>wachtwoorden en accounts</span> heeft gedrukt.</p>"
 				},
-				{},
-				{},
-				{},
-				{}
+				{
+					"title": "Step 3, soort account",
+					"desc": "<p>In de rechter kolom dient u op de knop <span class='text-primary'>anders</span> te drukken.</p>"
+				},
+				{
+					"title": "Step 4, account aanmaken",
+					"desc": "<p>In de rechter kolom dient u op de knop <span class='text-primary'>voeg mailaccount toe</span> te drukken.</p>"
+				},
+				{
+					"title": "Step 5, gegevens invullen",
+					"desc": "<p>Neem de door ons ingevoerde gegevens over.<br>Vervolgens dient u op de knop <span class='text-primary'>volgende</span> te drukken.</p>"
+				},
+				{
+					"title": "Step 6, aanvullende gegevens invullen",
+					"desc": "<p>Neem de door ons ingevoerde gegevens over.<br>Vervolgens dient u op de knop <span class='text-primary'>volgende</span> te drukken.</p>"
+				},
+				{
+					"title": "Step 7, beveiliging",
+					"desc": "<p>In sommige gevallen krijgt u een certificaat error klik op ga door. Krijgt u deze niet sla deze stap dan over.</p>"
+				},
+				{
+					"title": "Stap 8, succes!",
+					"desc": "<p>Kies de optie bewaar.<br>U kan nu alle vensters sluiten en het e-mailadres gebruiken.</p>"
+				}
 			]
 		},
 		{

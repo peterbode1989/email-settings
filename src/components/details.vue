@@ -14,8 +14,8 @@
 					op de {{ device.name }}.
 				</p>
 
-				<slick class="slider-nav pt-4" ref="slick" :options="slickOptionsText">
-					<div v-for="(step, index) in device.tutorial" v-bind:key="index" v-html="'<h3>' + step.title + '</h3>' + step.desc"></div>
+				<slick class="slider-nav" ref="slick" :options="slickOptionsText">
+					<div v-for="(step, index) in device.tutorial" v-bind:key="index" v-html="'<h5>' + step.title + '</h5>' + step.desc"></div>
 				</slick>
 			</b-col>
 
@@ -69,6 +69,7 @@ export default {
 				dots: false,
 				arrows: true,
 				infinite: false,
+				draggable: false,
 				asNavFor: '.slider-for',
 				fade: true,
 				prevArrow: '<button type="button" class="btn btn-link slick-prev">Vorige stap</button>',
