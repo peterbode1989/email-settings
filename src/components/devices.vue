@@ -5,7 +5,7 @@
 				<b-col cols="12">
 					<h1>E-mail instellen</h1>
 					<p class="lead">
-						U heeft aangegeven dat u de e-mail wil instellen voor <span class="text-primary" v-b-tooltip.hover title="Uw e-mailadres">{{ this.$route.query.email }}</span>
+						U heeft aangegeven dat u de e-mail wil instellen voor <span class="text-primary">{{ this.$route.query.email }}</span>
 						<br />Kies hieronder het programma waar u het e-mailadres op wenst in te stellen.
 					</p>
 
