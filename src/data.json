@@ -4,7 +4,7 @@
 			"id": 1,
 			"name": "iPhone",
 			"slug": "iphone",
-			"frame": "device-iphone-x",
+			"frame": "device-iphone-8",
 			"icon": "apple-brands.svg",
 			"tutorial": [
 				{

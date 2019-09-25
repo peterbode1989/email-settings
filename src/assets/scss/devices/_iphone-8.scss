@@ -9,170 +9,183 @@ $device-spacegray: #9b9ba0;
 $device-spacegray-dark: darken($device-spacegray, 15%);
 $device-spacegray-panel: #222;
 
+$baseY: 871px;
+$baseX: 419px;
+
+$device-multi-y: $baseY / $baseX;
+$device-size-x: 275px;
+$device-size-y: ($device-size-x * $device-multi-y);
+
+$padding-screen-y: new-size(102px, $baseY, $device-size-y);
+$padding-screen-x: new-size(22px, $baseX, $device-size-x);
+
 .device-iphone-8 {
-  height: 871px;
-  width: 419px;
+	height: $device-size-y;
+	width: $device-size-x;
 
-  .device-frame {
-    background: $device-silver-panel;
-    border-radius: 68px;
-    box-shadow: inset 0 0 0 2px $device-silver-dark, inset 0 0 0 7px $device-silver;
-    height: 871px;
-    padding: 102px 22px;
-    width: 419px;
-  }
+	.device-frame {
+		background: $device-silver-panel;
+		border-radius: new-size(68px, $baseY, $device-size-y);
+		box-shadow: inset 0 0 0 2px $device-silver-dark,
+			inset 0 0 0 7px $device-silver;
+		height: 100%;
+		padding: $padding-screen-y $padding-screen-x;
+		width: 100%;
+	}
 
-  // 1334-by-750-pixel resolution
-  .device-content {
-    border: 2px solid #222;
-    border-radius: 4px;
-    height: 667px;
-    width: 375px;
-  }
+	// 1334-by-750-pixel resolution
+	.device-content {
+		border: 2px solid #222;
+		border-radius: 4px;
+		height: ($device-size-y - ($padding-screen-y * 2));
+		width: ($device-size-x - ($padding-screen-x * 2));
+	}
 
-  .device-stripe {
-    &::after,
-    &::before {
-      border: solid rgba(#333, .15);
-      border-width: 0 7px;
-      content: "";
-      height: 6px;
-      left: 0;
-      position: absolute;
-      width: 100%;
-      z-index: 9;
-    }
-    &::after {
-      top: 68px;
-    }
-    &::before {
-      bottom: 68px;
-    }
-  }
+	.device-stripe {
+		&::after,
+		&::before {
+			border: solid rgba(#333, 0.15);
+			border-width: 0 7px;
+			content: '';
+			height: 6px;
+			left: 0;
+			position: absolute;
+			width: 100%;
+			z-index: 9;
+		}
+		&::after {
+			top: 68px;
+		}
+		&::before {
+			bottom: 68px;
+		}
+	}
 
-  // Home button
-  .device-header {
-    border: 2px solid $device-silver-dark;
-    border-radius: 50%;
-    bottom: 25px;
-    height: 58px;
-    left: 50%;
-    margin-left: -29px;
-    position: absolute;
-    width: 58px;
-  }
+	// Home button
+	.device-header {
+		border: 2px solid $device-silver-dark;
+		border-radius: 50%;
+		bottom: new-size(25px, $baseY, $device-size-y);
+		height: new-size(58px, $baseY, $device-size-y);
+		left: 50%;
+		margin-left: -(new-size(29px, $baseY, $device-size-y));
+		position: absolute;
+		width: new-size(58px, $baseY, $device-size-y);
+	}
 
-  .device-sensors {
-    background: #666;
-    border-radius: 3px;
-    height: 6px;
-    left: 50%;
-    margin-left: -38px;
-    position: absolute;
-    top: 52px;
-    width: 76px;
+	.device-sensors {
+		background: #666;
+		border-radius: 3px;
+		height: new-size(6px, $baseY, $device-size-y);
+		left: 50%;
+		margin-left: -(new-size(38px, $baseY, $device-size-y));
+		position: absolute;
+		top: new-size(52px, $baseY, $device-size-y);
+		width: new-size(76px, $baseY, $device-size-y);
 
-    &::after,
-    &::before {
-      background: #666;
-      border-radius: 50%;
-      content: "";
-      position: absolute;
-    }
-    &::after {  
-      height: 10px;
-      left: 50%;
-      margin-left: -5px;
-      top: -25px;
-      width: 10px;
-    }
-    &::before {
-      height: 12px;
-      left: -42px;
-      margin-top: -6px;
-      top: 50%;
-      width: 12px;
-    }
-  }
+		&::after,
+		&::before {
+			background: #666;
+			border-radius: 50%;
+			content: '';
+			position: absolute;
+		}
+		&::after {
+			height: new-size(10px, $baseY, $device-size-y);
+			left: 50%;
+			margin-left: -(new-size(5px, $baseY, $device-size-y));
+			top: -(new-size(25px, $baseY, $device-size-y));
+			width: new-size(10px, $baseY, $device-size-y);
+		}
+		&::before {
+			height: new-size(12px, $baseY, $device-size-y);
+			left: -(new-size(42px, $baseY, $device-size-y));
+			margin-top: -(new-size(6px, $baseY, $device-size-y));
+			top: 50%;
+			width: new-size(12px, $baseY, $device-size-y);
+		}
+	}
 
-  .device-btns {
-    background: $device-silver-dark;
-    height: 30px;
-    left: -3px;
-    position: absolute;
-    top: 102px;
-    width: 3px;
+	.device-btns {
+		background: $device-silver-dark;
+		height: new-size(30px, $baseY, $device-size-y);
+		left: -new-size(3px, $baseY, $device-size-y);
+		position: absolute;
+		top: new-size(102px, $baseY, $device-size-y);
+		width: new-size(3px, $baseY, $device-size-y);
 
-    &::after,
-    &::before {
-      background: $device-silver-dark;
-      content: "";
-      height: 56px;
-      left: 0;
-      position: absolute;
-      width: 3px;
-    }
+		&::after,
+		&::before {
+			background: $device-silver-dark;
+			content: '';
+			height: new-size(56px, $baseY, $device-size-y);
+			left: 0;
+			position: absolute;
+			width: new-size(3px, $baseY, $device-size-y);
+		}
 
-    &::after {
-      top: 62px;
-    }
-    &::before {
-      top: 132px;
-    }
-  }
+		&::after {
+			top: new-size(62px, $baseY, $device-size-y);
+		}
+		&::before {
+			top: new-size(132px, $baseY, $device-size-y);
+		}
+	}
 
-  .device-power {
-    background: $device-silver-dark;
-    height: 80px;
-    right: -2px;
-    position: absolute;
-    top: 160px;
-    width: 3px;
-  }
+	.device-power {
+		background: $device-silver-dark;
+		height: new-size(80px, $baseY, $device-size-y);
+		right: -new-size(2px, $baseY, $device-size-y);
+		position: absolute;
+		top: new-size(160px, $baseY, $device-size-y);
+		width: new-size(3px, $baseY, $device-size-y);
+	}
 
-  // Gold edition 
-  &.device-gold {
-    .device-frame {
-      box-shadow: inset 0 0 0 2px $device-gold-dark, inset 0 0 0 7px $device-gold;
-    }
+	// Gold edition
+	&.device-gold {
+		.device-frame {
+			box-shadow: inset 0 0 0 2px $device-gold-dark,
+				inset 0 0 0 7px $device-gold;
+		}
 
-    .device-header {
-      border-color: $device-gold-dark;
-    }
+		.device-header {
+			border-color: $device-gold-dark;
+		}
 
-    .device-btns {
-      &,
-      &::after,
-      &::before {
-        background: $device-gold-dark;
-      }
-    }
+		.device-btns {
+			&,
+			&::after,
+			&::before {
+				background: $device-gold-dark;
+			}
+		}
 
-    .device-power {
-      background: $device-gold-dark;
-    }
-  }
+		.device-power {
+			background: $device-gold-dark;
+		}
+	}
 
-  // Space Gray edition
-  &.device-spacegray {
-    .device-frame {
-      background: $device-spacegray-panel;
-      box-shadow: inset 0 0 0 2px $device-spacegray-dark, inset 0 0 0 7px $device-spacegray;
-    }
+	// Space Gray edition
+	&.device-spacegray {
+		.device-frame {
+			background: $device-spacegray-panel;
+			box-shadow: inset 0 0 0 2px $device-spacegray-dark,
+				inset 0 0 0 7px $device-spacegray;
+		}
 
-    .device-stripe {
-      &::after,
-      &::before {
-        border-color: rgba(#ccc, .35);
-      }
-    }
+		.device-stripe {
+			&::after,
+			&::before {
+				border-color: rgba(#ccc, 0.35);
+			}
+		}
 
-    .device-btns {
-      &,
-      &::after,
-      &::before {
-        background: $device-spacegray-dark;
-      }
-    }
-  }
+		.device-btns {
+			&,
+			&::after,
+			&::before {
+				background: $device-spacegray-dark;
+			}
+		}
+	}
 }

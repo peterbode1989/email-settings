@@ -1,0 +1,10 @@
+@function size-compare($x, $y) {
+	@if ($x > $y) {
+		@return $x;
+	}
+	@return $y;
+}
+
+@function new-size($o, $y, $x) {
+	@return ($x / 100) * (100 / ($y / $o));
+}

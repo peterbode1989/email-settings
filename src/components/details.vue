@@ -1,7 +1,6 @@
 <template>
 	<b-container class="details">
 		<b-row align-v="center">
-
 			<b-col cols="6">
 				<h1>E-mail instellen</h1>
 				<p class="lead mb-4">
@@ -15,16 +14,24 @@
 				</p>
 
 				<slick class="slider-nav" ref="slick" :options="slickOptionsText">
-					<div v-for="(step, index) in device.tutorial" v-bind:key="index" v-html="'<h5>' + step.title + '</h5>' + step.desc"></div>
+					<div
+						v-for="(step, index) in device.tutorial"
+						v-bind:key="index"
+						v-html="'<h5>' + step.title + '</h5>' + step.desc"
+					></div>
 				</slick>
 			</b-col>
 
-			<b-col cols="6">
+			<b-col cols="6" class="text-center">
 				<div class="device" v-bind:class="device.frame">
 					<div class="device-frame">
 						<div class="device-content">
 							<slick class="slider-for" ref="slick" :options="slickOptionsDevice">
-								<div class="device-actual-content" v-for="(step, index) in device.tutorial" v-bind:key="index">
+								<div
+									class="device-actual-content"
+									v-for="(step, index) in device.tutorial"
+									v-bind:key="index"
+								>
 									<img
 										class="img-fluid"
 										v-bind:src="'/assets/img/devices/' + device.slug + '/slide-' + (index + 1) + '.jpg'"
@@ -42,7 +49,6 @@
 					<div class="device-home"></div>
 				</div>
 			</b-col>
-
 		</b-row>
 	</b-container>
 </template>
@@ -62,7 +68,7 @@ export default {
 				dots: true,
 				arrows: false,
 				infinite: false,
-				asNavFor: '.slider-nav'
+				asNavFor: ".slider-nav"
 			},
 			slickOptionsText: {
 				slidesToShow: 1,
@@ -70,11 +76,13 @@ export default {
 				arrows: true,
 				infinite: false,
 				draggable: false,
-				asNavFor: '.slider-for',
+				asNavFor: ".slider-for",
 				fade: true,
-				prevArrow: '<button type="button" class="btn btn-link slick-prev">Vorige stap</button>',
-				nextArrow: '<button type="button" class="btn btn-link slick-next">Volgende stap</button>'
-			},
+				prevArrow:
+					'<button type="button" class="btn btn-link slick-prev">Vorige stap</button>',
+				nextArrow:
+					'<button type="button" class="btn btn-link slick-next">Volgende stap</button>'
+			}
 		};
 	},
 	computed: {
