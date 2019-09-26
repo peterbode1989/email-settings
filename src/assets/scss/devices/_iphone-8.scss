@@ -26,8 +26,7 @@ $padding-screen-x: new-size(22px, $baseX, $device-size-x);
 	.device-frame {
 		background: $device-silver-panel;
 		border-radius: new-size(68px, $baseY, $device-size-y);
-		box-shadow: inset 0 0 0 2px $device-silver-dark,
-			inset 0 0 0 7px $device-silver;
+		box-shadow: inset 0 0 0 2px $device-silver-dark, inset 0 0 0 7px $device-silver;
 		height: 100%;
 		padding: $padding-screen-y $padding-screen-x;
 		width: 100%;
@@ -52,7 +51,7 @@ $padding-screen-x: new-size(22px, $baseX, $device-size-x);
 					left: -5px;
 				}
 
-				&[class*='spam'] {
+				&[class*="spam"] {
 					&:after {
 						top: 0;
 						right: -5px;
@@ -73,7 +72,7 @@ $padding-screen-x: new-size(22px, $baseX, $device-size-x);
 		&::before {
 			border: solid rgba(#333, 0.15);
 			border-width: 0 7px;
-			content: '';
+			content: "";
 			height: 6px;
 			left: 0;
 			position: absolute;
@@ -114,7 +113,7 @@ $padding-screen-x: new-size(22px, $baseX, $device-size-x);
 		&::before {
 			background: #666;
 			border-radius: 50%;
-			content: '';
+			content: "";
 			position: absolute;
 		}
 		&::after {
@@ -144,7 +143,7 @@ $padding-screen-x: new-size(22px, $baseX, $device-size-x);
 		&::after,
 		&::before {
 			background: $device-silver-dark;
-			content: '';
+			content: "";
 			height: new-size(56px, $baseY, $device-size-y);
 			left: 0;
 			position: absolute;
@@ -171,8 +170,7 @@ $padding-screen-x: new-size(22px, $baseX, $device-size-x);
 	// Gold edition
 	&.device-gold {
 		.device-frame {
-			box-shadow: inset 0 0 0 2px $device-gold-dark,
-				inset 0 0 0 7px $device-gold;
+			box-shadow: inset 0 0 0 2px $device-gold-dark, inset 0 0 0 7px $device-gold;
 		}
 
 		.device-header {
@@ -196,8 +194,7 @@ $padding-screen-x: new-size(22px, $baseX, $device-size-x);
 	&.device-spacegray {
 		.device-frame {
 			background: $device-spacegray-panel;
-			box-shadow: inset 0 0 0 2px $device-spacegray-dark,
-				inset 0 0 0 7px $device-spacegray;
+			box-shadow: inset 0 0 0 2px $device-spacegray-dark, inset 0 0 0 7px $device-spacegray;
 		}
 
 		.device-stripe {
@@ -213,6 +210,97 @@ $padding-screen-x: new-size(22px, $baseX, $device-size-x);
 			&::before {
 				background: $device-spacegray-dark;
 			}
+		}
+	}
+}
+
+@media screen and (min-width: 1366px) {
+	$device-multi-y: $baseY / $baseX;
+	$device-size-x: 419px;
+	$device-size-y: ($device-size-x * $device-multi-y);
+
+	$padding-screen-y: new-size(102px, $baseY, $device-size-y);
+	$padding-screen-x: new-size(22px, $baseX, $device-size-x);
+
+	.device-iphone-8 {
+		height: $device-size-y;
+		width: $device-size-x;
+
+		.device-frame {
+			border-radius: new-size(68px, $baseY, $device-size-y);
+			padding: $padding-screen-y $padding-screen-x;
+		}
+
+		// 1334-by-750-pixel resolution
+		.device-content {
+			height: ($device-size-y - ($padding-screen-y * 2));
+			width: ($device-size-x - ($padding-screen-x * 2));
+
+			div.overlay {
+				> div.overlay-item {
+					font-size: new-size(20px, $baseY, $device-size-y);
+					line-height: new-size(42px, $baseY, $device-size-y);
+				}
+			}
+
+			.slick-dots {
+				bottom: -(new-size(160px, $baseY, $device-size-y));
+			}
+		}
+
+		// Home button
+		.device-header {
+			bottom: new-size(25px, $baseY, $device-size-y);
+			height: new-size(58px, $baseY, $device-size-y);
+			margin-left: -(new-size(29px, $baseY, $device-size-y));
+			width: new-size(58px, $baseY, $device-size-y);
+		}
+
+		.device-sensors {
+			height: new-size(6px, $baseY, $device-size-y);
+			margin-left: -(new-size(38px, $baseY, $device-size-y));
+			top: new-size(52px, $baseY, $device-size-y);
+			width: new-size(76px, $baseY, $device-size-y);
+
+			&::after {
+				height: new-size(10px, $baseY, $device-size-y);
+				margin-left: -(new-size(5px, $baseY, $device-size-y));
+				top: -(new-size(25px, $baseY, $device-size-y));
+				width: new-size(10px, $baseY, $device-size-y);
+			}
+			&::before {
+				height: new-size(12px, $baseY, $device-size-y);
+				left: -(new-size(42px, $baseY, $device-size-y));
+				margin-top: -(new-size(6px, $baseY, $device-size-y));
+				width: new-size(12px, $baseY, $device-size-y);
+			}
+		}
+
+		.device-btns {
+			height: new-size(30px, $baseY, $device-size-y);
+			left: -new-size(3px, $baseY, $device-size-y);
+			top: new-size(102px, $baseY, $device-size-y);
+			width: new-size(3px, $baseY, $device-size-y);
+
+			&::after,
+			&::before {
+				height: new-size(56px, $baseY, $device-size-y);
+				width: new-size(3px, $baseY, $device-size-y);
+			}
+
+			&::after {
+				top: new-size(62px, $baseY, $device-size-y);
+			}
+			&::before {
+				top: new-size(132px, $baseY, $device-size-y);
+			}
+		}
+
+		.device-power {
+			height: new-size(80px, $baseY, $device-size-y);
+			right: -new-size(2px, $baseY, $device-size-y);
+			top: new-size(160px, $baseY, $device-size-y);
+			width: new-size(3px, $baseY, $device-size-y);
 		}
 	}
 }

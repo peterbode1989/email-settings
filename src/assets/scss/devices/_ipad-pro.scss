@@ -16,7 +16,7 @@ $baseY: 804px;
 $baseX: 560px;
 
 $device-multi-y: $baseY / $baseX;
-$device-size-x: 400px;
+$device-size-x: 375px;
 $device-size-y: ($device-size-x * $device-multi-y);
 
 $padding-screen-y: new-size(62px, $baseY, $device-size-y);
@@ -44,6 +44,33 @@ $padding-screen-x: new-size(25px, $baseX, $device-size-x);
 
 		height: ($device-size-y - ($padding-screen-y * 2));
 		width: ($device-size-x - ($padding-screen-x * 2));
+
+		div.overlay {
+			> div.overlay-item {
+				font-size: new-size(20px, $baseY, $device-size-y);
+				line-height: new-size(42px, $baseY, $device-size-y);
+
+				&:before {
+					top: 3px;
+					right: -10px;
+					bottom: 3px;
+					left: -5px;
+				}
+
+				&[class*="spam"] {
+					&:after {
+						top: 0;
+						right: -5px;
+						bottom: 0;
+						left: -5px;
+					}
+				}
+			}
+		}
+
+		.slick-dots {
+			bottom: -(new-size(125px, $baseY, $device-size-y));
+		}
 	}
 
 	// Home button
@@ -108,6 +135,55 @@ $padding-screen-x: new-size(25px, $baseX, $device-size-x);
 
 		.device-header {
 			border-color: $device-spacegray-dark;
+		}
+	}
+}
+
+
+@media screen and (min-width: 1366px) {
+
+	$device-multi-y: $baseY / $baseX;
+	$device-size-x: 540px;
+	$device-size-y: ($device-size-x * $device-multi-y);
+
+	$padding-screen-y: new-size(62px, $baseY, $device-size-y);
+	$padding-screen-x: new-size(25px, $baseX, $device-size-x);
+
+	.device-ipad-pro {
+		height: $device-size-y;
+		width: $device-size-x;
+
+		.device-frame {
+			border-radius: new-size(38px, $baseY, $device-size-y);
+			padding: $padding-screen-y $padding-screen-x;
+		}
+
+		// 2224-by-1668-pixel resolution
+		.device-content {
+			height: ($device-size-y - ($padding-screen-y * 2));
+			width: ($device-size-x - ($padding-screen-x * 2));
+
+			.slick-dots {
+				bottom: -(new-size(125px, $baseY, $device-size-y));
+			}
+		}
+
+		// Home button
+		.device-header {
+			$newDim: new-size(34px, $baseY, $device-size-y);
+			bottom: $newDim/2;
+			height: $newDim;
+			margin-left: -($newDim/2);
+			width: $newDim;
+		}
+
+		.device-sensors {
+			$newDim: new-size(10px, $baseY, $device-size-y);
+			height: $newDim;
+			margin-left: -($newDim/2);
+			margin-top: -($newDim/2);
+			top: new-size(34px, $baseY, $device-size-y);
+			width: $newDim;
 		}
 	}
 }
