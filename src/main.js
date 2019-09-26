@@ -9,6 +9,7 @@ import { devices } from './data';
 
 Vue.config.productionTip = false;
 
+import 'typeface-roboto';
 import './assets/scss/theme.scss';
 
 new Vue({

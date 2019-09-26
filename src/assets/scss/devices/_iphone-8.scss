@@ -41,62 +41,30 @@ $padding-screen-x: new-size(22px, $baseX, $device-size-x);
 		width: ($device-size-x - ($padding-screen-x * 2));
 
 		div.overlay {
-			position: absolute;
-			top: 0;
-			right: 0;
-			bottom: 0;
-			left: 0;
-
 			> div.overlay-item {
-				color: theme-color('primary');
-				font-size: 0.77em;
-				text-align: left;
-				position: absolute;
-				line-height: 28px;
-				font-weight: 400;
+				font-size: new-size(20px, $baseY, $device-size-y);
+				line-height: new-size(42px, $baseY, $device-size-y);
 
 				&:before {
-					content: '';
-					position: absolute;
-
 					top: 3px;
 					right: -10px;
 					bottom: 3px;
 					left: -5px;
-					z-index: 0;
-					background-color: #fff;
 				}
 
 				&[class*='spam'] {
 					&:after {
-						content: '';
-						position: absolute;
-
 						top: 0;
 						right: -5px;
 						bottom: 0;
 						left: -5px;
-						z-index: 1;
-						border: 2px solid red;
-						border-radius: 4px;
-						background-color: pink;
 					}
-				}
-
-				@for $i from 0 through 100 {
-					&.y-#{$i} {
-						top: round(percentage($i/100));
-					}
-					&.x-#{$i} {
-						left: round(percentage($i/100));
-					}
-				}
-
-				> span {
-					position: relative;
-					z-index: 2;
 				}
 			}
+		}
+
+		.slick-dots {
+			bottom: -(new-size(160px, $baseY, $device-size-y));
 		}
 	}
 
