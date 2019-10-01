@@ -68,9 +68,22 @@
 		{
 			"id": 3,
 			"name": "Android",
-			"slug": "",
-			"frame": "device-google-pixel-2-xl",
-			"icon": "android-brands.svg"
+			"slug": "android",
+			"frame": "device-google-pixel",
+			"icon": "android-brands.svg",
+			"tutorial": [
+				{
+					"title": "Stap 1",
+					"desc": "step 1",
+					"tooltip": [
+						{
+							"x": 19,
+							"y": 48,
+							"title": "Wachtwoorden en accounts"
+						}
+					]
+				}
+			]
 		}
 	]
 }
