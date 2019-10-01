@@ -6,110 +6,248 @@ $device-spacegray: #83878a;
 $device-spacegray-dark: darken($device-spacegray, 5%);
 $device-spacegray-panel: #0d0d0d;
 
+$baseY: 444px;
+$baseX: 740px;
+$device-multi-y: $baseY / $baseX;
+
+@function calc-size($px) {
+	@return new-size($px, $baseY, $device-size-y);
+}
+
+$device-size-x: 480px;
+$device-size-y: ($device-size-x * $device-multi-y);
+
+$padding-screen-y: calc-size(29px);
+$padding-screen-y2: calc-size(39px);
+$padding-screen-x: calc-size(19px);
+
 .device-macbook-pro {
-  height: 444px;
-  width: 740px;
+	height: $device-size-y;
+	width: $device-size-x;
 
-  .device-frame {
-    background: $device-silver-panel;
-    border-radius: 20px;
-    box-shadow: inset 0 0 0 2px $device-silver-dark;
-    height: 428px;
-    margin: 0 auto;
-    padding: 29px 19px 39px 19px;
-    position: relative;
-    width: 614px;
+	.device-frame {
+		background: $device-silver-panel;
+		border-radius: calc-size(20px);
+		box-shadow: inset 0 0 0 2px $device-silver-dark;
+		height: calc-size(428px);
+		margin: 0 auto;
+		padding: $padding-screen-y $padding-screen-x $padding-screen-y2;
+		position: relative;
+		width: calc-size(614px);
 
-    &::after {
-      background: lighten($device-silver-panel, 10%);
-      border-radius: 0 0 20px 20px;
-      bottom: 2px;
-      content: "";
-      height: 26px;
-      left: 2px;
-      position: absolute;
-      width: 610px;
-    }
-    &::before {
-      bottom: 10px;
-      color: $device-silver-dark;
-      content: "MacBook Pro";
-      font-size: 12px;
-      height: 16px;
-      left: 50%;
-      line-height: 16px;
-      margin-left: -100px;
-      position: absolute;
-      text-align: center;
-      width: 200px;
-      z-index: 1;
-    }
-  }
+		&::after {
+			background: lighten($device-silver-panel, 10%);
+			border-radius: 0 0 calc-size(20px) calc-size(20px);
+			bottom: calc-size(2px);
+			content: "";
+			height: calc-size(26px);
+			left: calc-size(2px);
+			position: absolute;
+			width: calc-size(610px);
+		}
+		&::before {
+			bottom: calc-size(10px);
+			color: $device-silver-dark;
+			content: "MacBook Pro";
+			font-size: calc-size(12px);
+			height: calc-size(16px);
+			left: 50%;
+			line-height: calc-size(16px);
+			margin-left: calc-size(-100px);
+			position: absolute;
+			text-align: center;
+			width: calc-size(200px);
+			z-index: 1;
+		}
+	}
 
-  // 1680-by-1050-pixel resolution
-  .device-content {
-    border: 2px solid lighten($device-silver-panel, 2%);
-    border-radius: 2px;
-    height: 360px;
-    width: 576px;
-  }
+	// 1680-by-1050-pixel resolution
+	.device-content {
+		border: 2px solid lighten($device-silver-panel, 2%);
+		border-radius: 2px;
+		height: calc-size(360px);
+		width: calc-size(576px);
+	}
 
-  .device-power {
-    background: $device-silver;
-    border: solid darken($device-silver, 5%);
-    border-radius: 2px 2px 0 0;
-    border-width: 2px 4px 0 4px;
-    height: 14px;
-    margin-top: -10px;
-    position: relative;
-    width: 740px;
-    z-index: 9;
-    
-    &::after,
-    &::before {
-      content: "";
-      position: absolute;
-    }
-    &::after {
-      background: lighten($device-silver-dark, 5%);
-      border-radius: 0 0 10px 10px;
-      box-shadow: inset 0 0 4px 2px darken($device-silver-dark, 5%);
-      height: 10px;
-      left: 50%;
-      margin-left: -60px;
-      top: -2px;
-      width: 120px;
-    }
-    &::before {
-      background: darken($device-silver-dark, 15%);
-      border-radius: 0 0 180px 180px/ 0 0 12px 12px;
-      box-shadow: inset 0 -2px 6px 0 darken($device-silver-dark, 50%);
-      height: 12px;
-      left: -4px;
-      margin: 0 auto;
-      top: 10px;
-      width: 740px;
-    }
-  }
+	.device-power {
+		background: $device-silver;
+		border: solid darken($device-silver, 5%);
+		border-radius: 2px 2px 0 0;
+		border-width: 2px 4px 0 4px;
+		height: calc-size(14px);
+		margin-top: calc-size(-10px);
+		position: relative;
+		width: calc-size(740px);
+		z-index: 9;
 
-  // Space Gray edition
-  &.device-spacegray {
-    .device-frame {
-      box-shadow: inset 0 0 0 2px $device-spacegray-dark;
-    }
+		&::after,
+		&::before {
+			content: "";
+			position: absolute;
+		}
 
-    .device-power {
-      background: lighten($device-spacegray, 5%);
-      border-color: $device-spacegray-dark;
+		&::after {
+			background: lighten($device-silver-dark, 5%);
+			border-radius: 0 0 10px 10px;
+			box-shadow: inset 0 0 4px 2px darken($device-silver-dark, 5%);
+			height: calc-size(10px);
+			left: 50%;
+			margin-left: calc-size(-60px);
+			top: calc-size(-2px);
+			width: calc-size(120px);
+		}
+		&::before {
+			background: darken($device-silver-dark, 15%);
+			border-radius: 0 0 180px 180px/ 0 0 calc-size(12px) calc-size(12px);
+			box-shadow: inset 0 -2px 6px 0 darken($device-silver-dark, 50%);
+			height: calc-size(12px);
+			left: calc-size(-4px);
+			margin: 0 auto;
+			top: calc-size(10px);
+			width: calc-size(740px);
+		}
+	}
 
-      &::after {
-        background: lighten($device-spacegray-dark, 5%);
-        box-shadow: inset 0 0 4px 2px darken($device-spacegray-dark, 5%);
-      }
-      &::before {
-        background: darken($device-spacegray-dark, 15%);
-        box-shadow: inset 0 -2px 6px 0 darken($device-spacegray-dark, 50%);
-      }
-    }
-  }
+	// Space Gray edition
+	&.device-spacegray {
+		.device-frame {
+			-shadow: inset 0 0 0 2px $device-spacegray-dark;
+		}
+
+		.device-power {
+			background: lighten($device-spacegray, 5%);
+			border-color: $device-spacegray-dark;
+
+			&::after {
+				background: lighten($device-spacegray-dark, 5%);
+				box-shadow: inset 0 0 4px 2px darken($device-spacegray-dark, 5%);
+			}
+			&::before {
+				background: darken($device-spacegray-dark, 15%);
+				box-shadow: inset 0 -2px 6px 0 darken($device-spacegray-dark, 50%);
+			}
+		}
+	}
+}
+
+@media screen and (min-width: 1366px) {
+	@function calc-size($px) {
+		@return new-size($px, $baseY, $device-size-y);
+	}
+	
+	$device-size-x: 740px;
+	$device-size-y: ($device-size-x * $device-multi-y);
+	
+	$padding-screen-y: calc-size(29px);
+	$padding-screen-y2: calc-size(39px);
+	$padding-screen-x: calc-size(19px);
+
+	.device-macbook-pro {
+		height: $device-size-y;
+		width: $device-size-x;
+
+		.device-frame {
+			background: $device-silver-panel;
+			border-radius: calc-size(20px);
+			box-shadow: inset 0 0 0 2px $device-silver-dark;
+			height: calc-size(428px);
+			margin: 0 auto;
+			padding: $padding-screen-y $padding-screen-x $padding-screen-y2;
+			position: relative;
+			width: calc-size(614px);
+
+			&::after {
+				background: lighten($device-silver-panel, 10%);
+				border-radius: 0 0 calc-size(20px) calc-size(20px);
+				bottom: calc-size(2px);
+				content: "";
+				height: calc-size(26px);
+				left: calc-size(2px);
+				position: absolute;
+				width: calc-size(610px);
+			}
+			&::before {
+				bottom: calc-size(10px);
+				color: $device-silver-dark;
+				content: "MacBook Pro";
+				font-size: calc-size(12px);
+				height: calc-size(16px);
+				left: 50%;
+				line-height: calc-size(16px);
+				margin-left: calc-size(-100px);
+				position: absolute;
+				text-align: center;
+				width: calc-size(200px);
+				z-index: 1;
+			}
+		}
+
+		// 1680-by-1050-pixel resolution
+		.device-content {
+			border: 2px solid lighten($device-silver-panel, 2%);
+			border-radius: 2px;
+			height: calc-size(360px);
+			width: calc-size(576px);
+		}
+
+		.device-power {
+			background: $device-silver;
+			border: solid darken($device-silver, 5%);
+			border-radius: 2px 2px 0 0;
+			border-width: 2px 4px 0 4px;
+			height: calc-size(14px);
+			margin-top: calc-size(-10px);
+			position: relative;
+			width: calc-size(740px);
+			z-index: 9;
+
+			&::after,
+			&::before {
+				content: "";
+				position: absolute;
+			}
+
+			&::after {
+				background: lighten($device-silver-dark, 5%);
+				border-radius: 0 0 10px 10px;
+				box-shadow: inset 0 0 4px 2px darken($device-silver-dark, 5%);
+				height: calc-size(10px);
+				left: 50%;
+				margin-left: calc-size(-60px);
+				top: calc-size(-2px);
+				width: calc-size(120px);
+			}
+			&::before {
+				background: darken($device-silver-dark, 15%);
+				border-radius: 0 0 calc-size(180px) calc-size(180px) 0 0 calc-size(12px) calc-size(12px);
+				box-shadow: inset 0 -2px 6px 0 darken($device-silver-dark, 50%);
+				height: calc-size(12px);
+				left: calc-size(-4px);
+				margin: 0 auto;
+				top: calc-size(10px);
+				width: calc-size(740px);
+			}
+		}
+
+		// Space Gray edition
+		&.device-spacegray {
+			.device-frame {
+				-shadow: inset 0 0 0 2px $device-spacegray-dark;
+			}
+
+			.device-power {
+				background: lighten($device-spacegray, 5%);
+				border-color: $device-spacegray-dark;
+
+				&::after {
+					background: lighten($device-spacegray-dark, 5%);
+					box-shadow: inset 0 0 4px 2px darken($device-spacegray-dark, 5%);
+				}
+				&::before {
+					background: darken($device-spacegray-dark, 15%);
+					box-shadow: inset 0 -2px 6px 0 darken($device-spacegray-dark, 50%);
+				}
+			}
+		}
+	}
 }

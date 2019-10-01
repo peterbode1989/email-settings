@@ -10,7 +10,7 @@
 					</p>
 
 					<b-row class="mt-5">
-						<b-col cols="4" v-bind:key="device.id" v-for="device in devices">
+						<b-col cols="12" md="4" class="device-holder" v-bind:key="device.id" v-for="device in devices">
 							<Device v-bind:device="device" v-bind:email="email" />
 						</b-col>
 					</b-row>

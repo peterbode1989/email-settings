@@ -1,12 +1,14 @@
 <template>
 	<b-card class="device shadow">
-		<div class="device-type">
+		<div class="device-type" v-bind:class="device.type">
 			<img class="device-type-icon" v-bind:src="'./assets/img/icons/' + device.icon">
 		</div>
-		<h3 class="py-3">{{device.name}}</h3>
+		<h4 class="py-3">
+			<span>{{device.name}}</span>
+		</h4>
 
-		<router-link v-if="device.slug" class="btn btn-primary" :to="{path: '/overview/' + device.slug, query: {email: this.$route.query.email} }">Toon uitleg</router-link>
-		<a v-else href="javascript:void(0);" class="btn btn-primary disabled">Binnenkort verwacht</a>
+		<b-button variant="link" v-if="device.slug" class="m-auto stretched-link" :to="{path: '/overview/' + device.slug, query: {email: this.$route.query.email} }">Toon uitleg</b-button>
+		<b-button variant="link" v-else class="m-auto disabled">Binnenkort verwacht</b-button>
 	</b-card>
 </template>
 

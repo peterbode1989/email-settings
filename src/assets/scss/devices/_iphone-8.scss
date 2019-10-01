@@ -16,8 +16,12 @@ $device-multi-y: $baseY / $baseX;
 $device-size-x: 275px;
 $device-size-y: ($device-size-x * $device-multi-y);
 
-$padding-screen-y: new-size(102px, $baseY, $device-size-y);
-$padding-screen-x: new-size(22px, $baseX, $device-size-x);
+@function calc-size($px) {
+	@return new-size($px, $baseY, $device-size-y);
+}
+
+$padding-screen-y: calc-size(102px);
+$padding-screen-x: calc-size(22px);
 
 .device-iphone-8 {
 	height: $device-size-y;
@@ -25,7 +29,7 @@ $padding-screen-x: new-size(22px, $baseX, $device-size-x);
 
 	.device-frame {
 		background: $device-silver-panel;
-		border-radius: new-size(68px, $baseY, $device-size-y);
+		border-radius: calc-size(68px);
 		box-shadow: inset 0 0 0 2px $device-silver-dark, inset 0 0 0 7px $device-silver;
 		height: 100%;
 		padding: $padding-screen-y $padding-screen-x;
@@ -41,8 +45,8 @@ $padding-screen-x: new-size(22px, $baseX, $device-size-x);
 
 		div.overlay {
 			> div.overlay-item {
-				font-size: new-size(20px, $baseY, $device-size-y);
-				line-height: new-size(42px, $baseY, $device-size-y);
+				font-size: calc-size(20px);
+				line-height: calc-size(42px);
 
 				&:before {
 					top: 3px;
@@ -63,7 +67,7 @@ $padding-screen-x: new-size(22px, $baseX, $device-size-x);
 		}
 
 		.slick-dots {
-			bottom: -(new-size(160px, $baseY, $device-size-y));
+			bottom: calc-size(-160px);
 		}
 	}
 
@@ -91,23 +95,23 @@ $padding-screen-x: new-size(22px, $baseX, $device-size-x);
 	.device-header {
 		border: 2px solid $device-silver-dark;
 		border-radius: 50%;
-		bottom: new-size(25px, $baseY, $device-size-y);
-		height: new-size(58px, $baseY, $device-size-y);
+		bottom: calc-size(25px);
+		height: calc-size(58px);
 		left: 50%;
-		margin-left: -(new-size(29px, $baseY, $device-size-y));
+		margin-left: calc-size(-29px);
 		position: absolute;
-		width: new-size(58px, $baseY, $device-size-y);
+		width: calc-size(58px);
 	}
 
 	.device-sensors {
 		background: #666;
 		border-radius: 3px;
-		height: new-size(6px, $baseY, $device-size-y);
+		height: calc-size(6px);
 		left: 50%;
-		margin-left: -(new-size(38px, $baseY, $device-size-y));
+		margin-left: calc-size(-38px);
 		position: absolute;
-		top: new-size(52px, $baseY, $device-size-y);
-		width: new-size(76px, $baseY, $device-size-y);
+		top: calc-size(52px);
+		width: calc-size(76px);
 
 		&::after,
 		&::before {
@@ -117,54 +121,54 @@ $padding-screen-x: new-size(22px, $baseX, $device-size-x);
 			position: absolute;
 		}
 		&::after {
-			height: new-size(10px, $baseY, $device-size-y);
+			height: calc-size(10px);
 			left: 50%;
-			margin-left: -(new-size(5px, $baseY, $device-size-y));
-			top: -(new-size(25px, $baseY, $device-size-y));
-			width: new-size(10px, $baseY, $device-size-y);
+			margin-left: calc-size(-5px);
+			top: calc-size(-25px);
+			width: calc-size(10px);
 		}
 		&::before {
-			height: new-size(12px, $baseY, $device-size-y);
-			left: -(new-size(42px, $baseY, $device-size-y));
-			margin-top: -(new-size(6px, $baseY, $device-size-y));
+			height: calc-size(12px);
+			left: calc-size(-42px);
+			margin-top: calc-size(-6px);
 			top: 50%;
-			width: new-size(12px, $baseY, $device-size-y);
+			width: calc-size(12px);
 		}
 	}
 
 	.device-btns {
 		background: $device-silver-dark;
-		height: new-size(30px, $baseY, $device-size-y);
-		left: -new-size(3px, $baseY, $device-size-y);
+		height: calc-size(30px);
+		left: -calc-size(3px);
 		position: absolute;
-		top: new-size(102px, $baseY, $device-size-y);
-		width: new-size(3px, $baseY, $device-size-y);
+		top: calc-size(102px);
+		width: calc-size(3px);
 
 		&::after,
 		&::before {
 			background: $device-silver-dark;
 			content: "";
-			height: new-size(56px, $baseY, $device-size-y);
+			height: calc-size(56px);
 			left: 0;
 			position: absolute;
-			width: new-size(3px, $baseY, $device-size-y);
+			width: calc-size(3px);
 		}
 
 		&::after {
-			top: new-size(62px, $baseY, $device-size-y);
+			top: calc-size(62px);
 		}
 		&::before {
-			top: new-size(132px, $baseY, $device-size-y);
+			top: calc-size(132px);
 		}
 	}
 
 	.device-power {
 		background: $device-silver-dark;
-		height: new-size(80px, $baseY, $device-size-y);
-		right: -new-size(2px, $baseY, $device-size-y);
+		height: calc-size(80px);
+		right: -calc-size(2px);
 		position: absolute;
-		top: new-size(160px, $baseY, $device-size-y);
-		width: new-size(3px, $baseY, $device-size-y);
+		top: calc-size(160px);
+		width: calc-size(3px);
 	}
 
 	// Gold edition
@@ -215,19 +219,22 @@ $padding-screen-x: new-size(22px, $baseX, $device-size-x);
 }
 
 @media screen and (min-width: 1366px) {
-	$device-multi-y: $baseY / $baseX;
 	$device-size-x: 419px;
 	$device-size-y: ($device-size-x * $device-multi-y);
 
-	$padding-screen-y: new-size(102px, $baseY, $device-size-y);
-	$padding-screen-x: new-size(22px, $baseX, $device-size-x);
+	@function calc-size($px) {
+		@return new-size($px, $baseY, $device-size-y);
+	}
+	
+	$padding-screen-y: calc-size(102px);
+	$padding-screen-x: calc-size(22px);
 
 	.device-iphone-8 {
 		height: $device-size-y;
 		width: $device-size-x;
 
 		.device-frame {
-			border-radius: new-size(68px, $baseY, $device-size-y);
+			border-radius: calc-size(68px);
 			padding: $padding-screen-y $padding-screen-x;
 		}
 
@@ -238,69 +245,69 @@ $padding-screen-x: new-size(22px, $baseX, $device-size-x);
 
 			div.overlay {
 				> div.overlay-item {
-					font-size: new-size(20px, $baseY, $device-size-y);
-					line-height: new-size(42px, $baseY, $device-size-y);
+					font-size: calc-size(20px);
+					line-height: calc-size(42px);
 				}
 			}
 
 			.slick-dots {
-				bottom: -(new-size(160px, $baseY, $device-size-y));
+				bottom: calc-size(-160px);
 			}
 		}
 
 		// Home button
 		.device-header {
-			bottom: new-size(25px, $baseY, $device-size-y);
-			height: new-size(58px, $baseY, $device-size-y);
-			margin-left: -(new-size(29px, $baseY, $device-size-y));
-			width: new-size(58px, $baseY, $device-size-y);
+			bottom: calc-size(25px);
+			height: calc-size(58px);
+			margin-left: calc-size(-29px);
+			width: calc-size(58px);
 		}
 
 		.device-sensors {
-			height: new-size(6px, $baseY, $device-size-y);
-			margin-left: -(new-size(38px, $baseY, $device-size-y));
-			top: new-size(52px, $baseY, $device-size-y);
-			width: new-size(76px, $baseY, $device-size-y);
+			height: calc-size(6px);
+			margin-left: calc-size(-38px);
+			top: calc-size(52px);
+			width: calc-size(76px);
 
 			&::after {
-				height: new-size(10px, $baseY, $device-size-y);
-				margin-left: -(new-size(5px, $baseY, $device-size-y));
-				top: -(new-size(25px, $baseY, $device-size-y));
-				width: new-size(10px, $baseY, $device-size-y);
+				height: calc-size(10px);
+				margin-left: calc-size(-5px);
+				top: calc-size(-25px);
+				width: calc-size(10px);
 			}
 			&::before {
-				height: new-size(12px, $baseY, $device-size-y);
-				left: -(new-size(42px, $baseY, $device-size-y));
-				margin-top: -(new-size(6px, $baseY, $device-size-y));
-				width: new-size(12px, $baseY, $device-size-y);
+				height: calc-size(12px);
+				left: calc-size(-42px);
+				margin-top: calc-size(-6px);
+				width: calc-size(12px);
 			}
 		}
 
 		.device-btns {
-			height: new-size(30px, $baseY, $device-size-y);
-			left: -new-size(3px, $baseY, $device-size-y);
-			top: new-size(102px, $baseY, $device-size-y);
-			width: new-size(3px, $baseY, $device-size-y);
+			height: calc-size(30px);
+			left: calc-size(-3px);
+			top: calc-size(102px);
+			width: calc-size(3px);
 
 			&::after,
 			&::before {
-				height: new-size(56px, $baseY, $device-size-y);
-				width: new-size(3px, $baseY, $device-size-y);
+				height: calc-size(56px);
+				width: calc-size(3px);
 			}
 
 			&::after {
-				top: new-size(62px, $baseY, $device-size-y);
+				top: calc-size(62px);
 			}
 			&::before {
-				top: new-size(132px, $baseY, $device-size-y);
+				top: calc-size(132px);
 			}
 		}
 
 		.device-power {
-			height: new-size(80px, $baseY, $device-size-y);
-			right: -new-size(2px, $baseY, $device-size-y);
-			top: new-size(160px, $baseY, $device-size-y);
-			width: new-size(3px, $baseY, $device-size-y);
+			height: calc-size(80px);
+			right: calc-size(-2px);
+			top: calc-size(160px);
+			width: calc-size(3px);
 		}
 	}
 }

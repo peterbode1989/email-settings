@@ -5,6 +5,7 @@
 			"name": "iPhone",
 			"slug": "iphone",
 			"frame": "device-iphone-8",
+			"type": "phone",
 			"icon": "apple-brands.svg",
 			"tutorial": [
 				{
@@ -29,6 +30,7 @@
 			"name": "iPad",
 			"slug": "ipad",
 			"frame": "device-ipad-pro device-gold",
+			"type": "phone",
 			"icon": "apple-brands.svg",
 			"tutorial": [
 				{
@@ -69,8 +71,51 @@
 			"id": 3,
 			"name": "Android",
 			"slug": "android",
-			"frame": "device-google-pixel",
+			"frame": "device-google-pixel device-blue",
+			"type": "phone",
 			"icon": "android-brands.svg",
+			"tutorial": [
+				{
+					"title": "Stap 1",
+					"desc": "step 1",
+					"tooltip": [
+						{
+							"x": 19,
+							"y": 48,
+							"title": "Wachtwoorden en accounts"
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": 4,
+			"name": "Apple mail",
+			"slug": "macbook",
+			"frame": "device-macbook-pro",
+			"type": "laptop",
+			"icon": "apple-brands.svg",
+			"tutorial": [
+				{
+					"title": "Stap 1",
+					"desc": "step 1",
+					"tooltip": [
+						{
+							"x": 19,
+							"y": 48,
+							"title": "Wachtwoorden en accounts"
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": 5,
+			"name": "Microsoft Outlook",
+			"slug": "laptop",
+			"frame": "device-surface-book",
+			"type": "laptop",
+			"icon": "windows-brands.svg",
 			"tutorial": [
 				{
 					"title": "Stap 1",
