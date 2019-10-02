@@ -2,20 +2,20 @@
 	<b-container class="details">
 		<b-row align-v="center">
 			<b-col v-bind:cols="device.grid[0]">
-				<h1>E-mail instellen</h1>
+				<!-- <h1>E-mail instellen</h1>
 				<p class="lead mb-4">
 					Hieronder is een handleiding gemaakt voor het instellen van
 					<span
 						class="text-primary"
 					>{{ email }}</span>
 					op de {{ device.name }}.
-				</p>
+				</p> -->
 
 				<slick class="slider-nav" ref="slick" :options="slickOptionsText">
 					<div
 						v-for="(step, index) in device.tutorial"
 						v-bind:key="index"
-						v-html="'<h5>' + step.title + '</h5>' + step.desc"
+						v-html="'<h1>' + step.title + '</h1><p>' + step.desc + '</p>'"
 					></div>
 				</slick>
 			</b-col>
@@ -111,9 +111,6 @@ export default {
 		let name = email.substring(0, index);
 		let domain = email.substring(index + 1);
 		this.address = { name, domain };
-		// let test = splitEmail(this.$route.query.email);
-		// console.log(test)
-		// console.log(this.$route.query.email);
 	}
 };
 </script>

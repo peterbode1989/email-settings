@@ -114,32 +114,32 @@
 			"grid": [12,12],
 			"tutorial": [
 				{
-					"title": "Stap 1",
-					"desc": "step 1"
+					"title": "Stap 1: open de app",
+					"desc": "Start Apple mail door op het <span class='text-primary'>mail icoon</span> te klikken."
 				},
 				{
-					"title": "Stap 1",
-					"desc": "step 1"
+					"title": "Stap 2: account-type kiezen",
+					"desc": "Selecteer <span class='text-primary'>andere mail-account</span> en klik op ga door."
 				},
 				{
-					"title": "Stap 1",
-					"desc": "step 1"
+					"title": "Stap 3: gegevens invoeren",
+					"desc": "Neem de <span class='text-primary'>gegevens hieronder</span> over en klik op log in."
 				},
 				{
-					"title": "Stap 1",
-					"desc": "step 1"
+					"title": "Stap 4: aanvullende gegevens",
+					"desc": "Neem de <span class='text-primary'>gegevens hieronder</span> over en klik op log in."
 				},
 				{
-					"title": "Stap 1",
-					"desc": "step 1"
+					"title": "Stap 5: certificaat",
+					"desc": "In sommige gevallen krijgt u een <span class='text-primary'>certificaat error</span>.<br><small class=\"font-italic\">Krijgt u deze fout niet, sla dan de <span class='text-primary'>huidige stap</span> en de <span class='text-primary'>volgende stap</span> over.</small>"
 				},
 				{
-					"title": "Stap 1",
-					"desc": "step 1"
+					"title": "Stap 6: certificaat accepteren",
+					"desc": "Om het certificaat te accepteren moet u de <span class='text-primary'>gebruikers gegevens</span> van uw mac account invoeren."
 				},
 				{
-					"title": "Stap 1",
-					"desc": "step 1"
+					"title": "Stap 7: Uw bent klaar",
+					"desc": "De mail is nu ingesteld, klik op <span class='text-primary'>gereed</span> om de mail te gebruiken."
 				}
 			]
 		},
