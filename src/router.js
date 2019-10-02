@@ -16,13 +16,13 @@ export default new Router({
 			component: AuthComponent
 		},
 		{
-			path: '/apparaten',
+			path: '/overview',
 			name: 'overview',
 			component: OverviewComponent,
 			props: true
 		},
 		{
-			path: '/apparaten/:device',
+			path: '/overview/:device',
 			name: 'details',
 			component: DetailsComponent,
 			props: true
