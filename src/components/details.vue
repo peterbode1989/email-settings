@@ -1,7 +1,7 @@
 <template>
 	<b-container class="details">
 		<b-row align-v="center">
-			<b-col cols="4">
+			<b-col v-bind:cols="device.grid[0]">
 				<h1>E-mail instellen</h1>
 				<p class="lead mb-4">
 					Hieronder is een handleiding gemaakt voor het instellen van
@@ -20,7 +20,7 @@
 				</slick>
 			</b-col>
 
-			<b-col cols="8" class="text-center">
+			<b-col v-bind:cols="device.grid[1]" class="text-center">
 				<div class="device" v-bind:class="device.frame">
 					<div class="device-frame">
 						<div class="device-content">
@@ -84,9 +84,9 @@ export default {
 				asNavFor: ".slider-for",
 				fade: true,
 				prevArrow:
-					'<button type="button" class="btn btn-link slick-prev">Vorige stap</button>',
+					'<button type="button" class="btn btn-link slick-prev"><span>Vorige stap</span><span></span></button>',
 				nextArrow:
-					'<button type="button" class="btn btn-link slick-next">Volgende stap</button>'
+					'<button type="button" class="btn btn-link slick-next"><span>Volgende stap</span><span></span></button>'
 			},
 			slickOptionsDevice: {
 				slidesToShow: 1,

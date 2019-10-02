@@ -7,6 +7,7 @@
 			"frame": "device-iphone-8",
 			"type": "phone",
 			"icon": "apple-brands.svg",
+			"grid": [4,8],
 			"tutorial": [
 				{
 					"title": "Stap 1",
@@ -34,6 +35,7 @@
 			"frame": "device-ipad-pro device-gold",
 			"type": "tablet",
 			"icon": "apple-brands.svg",
+			"grid": [4,8],
 			"tutorial": [
 				{
 					"title": "Stap 1, open instellingen",
@@ -76,6 +78,7 @@
 			"frame": "device-google-pixel device-blue",
 			"type": "phone",
 			"icon": "android-brands.svg",
+			"grid": [4,8],
 			"tutorial": [
 				{
 					"title": "Stap 1",
@@ -108,6 +111,7 @@
 			"frame": "device-macbook-pro",
 			"type": "laptop",
 			"icon": "apple-brands.svg",
+			"grid": [12,12],
 			"tutorial": [
 				{
 					"title": "Stap 1",
@@ -146,6 +150,7 @@
 			"frame": "device-surface-book",
 			"type": "laptop",
 			"icon": "windows-brands.svg",
+			"grid": [12,12],
 			"tutorial": [
 				{
 					"title": "Stap 1",
