@@ -103,6 +103,14 @@ body {
 						}
 					}
 				}
+
+				&.shadow {
+					transition: all .25s ease-in-out;
+
+					&:hover {
+						box-shadow: 0 0.3125rem 0.875rem 0 rgba(theme-color('primary'), .5)!important;
+					}
+				}
 			}
 
 			@include media-breakpoint-down(sm) {
