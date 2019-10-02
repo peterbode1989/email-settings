@@ -30,7 +30,7 @@
 			"name": "iPad",
 			"slug": "ipad",
 			"frame": "device-ipad-pro device-gold",
-			"type": "phone",
+			"type": "tablet",
 			"icon": "apple-brands.svg",
 			"tutorial": [
 				{
