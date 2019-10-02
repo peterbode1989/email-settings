@@ -3,82 +3,234 @@ $device-silver: #eee;
 $device-silver-dark: darken($device-silver, 15%);
 $device-silver-panel: #0d0d0d;
 
+$baseY: 424px;
+$baseX: 728px;
+$device-multi-y: $baseY / $baseX;
+
+$device-size-x: 600px;
+$device-size-y: ($device-size-x * $device-multi-y);
+
+@function calc-size($px) {
+	@return new-size($px, $baseY, $device-size-y);
+}
+
+$padding-screen-y: calc-size(24px);
+$padding-screen-x: calc-size(22px);
+
 .device-surface-book {
-  height: 424px;
-  width: 728px;
+	height: $device-size-y;
+	width: $device-size-x;
 
-  .device-frame {
-    background: $device-silver-panel;
-    border-radius: 12px;
-    box-shadow: inset 0 0 0 2px $device-silver-dark;
-    height: 408px;
-    margin: 0 auto;
-    padding: 24px 22px;
-    position: relative;
-    width: 584px;
-  }
+	.device-frame {
+		background: $device-silver-panel;
+		border-radius: calc-size(12px);
+		box-shadow: inset 0 0 0 2px $device-silver-dark;
+		height: calc-size(408px);
+		margin: 0 auto;
+		padding: $padding-screen-y $padding-screen-x;
+		position: relative;
+		width: calc-size(584px);
+	}
 
-  // 3000-by-2000-pixel resolution
-  .device-content {
-    border: 2px solid lighten($device-silver-panel, 2%);
-    border-radius: 2px;
-    height: 360px;
-    width: 540px;
-  }
+	// 3000-by-2000-pixel resolution
+	.device-content {
+		border: 2px solid lighten($device-silver-panel, 2%);
+		border-radius: 2px;
+		height: calc-size(360px);
+		width: calc-size(540px);
+	}
 
-  .device-btns {
-    &::after,
-    &::before {
-      background: $device-silver-dark;
-      content: "";
-      height: 2px;
-      position: absolute;
-      top: -2px;
-    }
+	.device-btns {
+		&::after,
+		&::before {
+			background: $device-silver-dark;
+			content: "";
+			height: calc-size(2px);
+			position: absolute;
+			top: calc-size(-2px);
+		}
 
-    &::after {
-      left: 122px;
-      width: 20px;
-    }
-    &::before {
-      left: 168px;
-      width: 44px;
-    }
-  }
+		&::after {
+			left: calc-size(122px);
+			width: calc-size(20px);
+		}
+		&::before {
+			left: calc-size(168px);
+			width: calc-size(44px);
+		}
+	}
 
-  .device-power {
-    background: linear-gradient(to bottom, $device-silver, $device-silver-dark);
-    border: solid $device-silver-dark;
-    border-radius: 2px;
-    border-width: 0 2px;
-    height: 12px;
-    margin-top: 4px;
-    position: relative;
-    width: 728px;
+	.device-power {
+		background: linear-gradient(to bottom, $device-silver, $device-silver-dark);
+		border: solid $device-silver-dark;
+		border-radius: 2px;
+		border-width: 0 2px;
+		height: calc-size(12px);
+		margin-top: calc-size(4px);
+		position: relative;
+		width: calc-size(728px);
 
-    &::after,
-    &::before {
-      content: "";
-      position: absolute;
-    }
-    &::after {
-      background: radial-gradient(circle at center, $device-silver 0, $device-silver 95%, darken($device-silver-dark, 15%) 100%);;
-      border-radius: 0 0 6px 6px;
-      height: 8px;
-      left: 50%;
-      margin-left: -125px;
-      top: 0;
-      width: 250px;
-      z-index: 1;
-    }
-    &::before {
-      background: linear-gradient(to bottom, $device-silver, $device-silver-dark);
-      border-radius: 2px 2px 0 0;
-      bottom: 12px;
-      height: 8px;
-      left: 50%;
-      margin-left: -292px;
-      width: 584px;
-    }
-  }
+		&::after,
+		&::before {
+			content: "";
+			position: absolute;
+		}
+		&::after {
+			background: radial-gradient(
+				circle at center,
+				$device-silver 0,
+				$device-silver 95%,
+				darken($device-silver-dark, 15%) 100%
+			);
+			border-radius: 0 0 6px 6px;
+			height: calc-size(8px);
+			left: 50%;
+			margin-left: calc-size(-125px);
+			top: 0;
+			width: calc-size(250px);
+			z-index: 1;
+		}
+		&::before {
+			background: linear-gradient(to bottom, $device-silver, $device-silver-dark);
+			border-radius: 2px 2px 0 0;
+			bottom: calc-size(12px);
+			height: calc-size(8px);
+			left: 50%;
+			margin-left: calc-size(-292px);
+			width: calc-size(584px);
+		}
+	}
+}
+
+
+@media screen and (min-width: 1200px) {
+	$device-size-x: 720px;
+	$device-size-y: ($device-size-x * $device-multi-y);
+	
+	@function calc-size($px) {
+		@return new-size($px, $baseY, $device-size-y);
+	}
+	
+	$padding-screen-y: calc-size(24px);
+	$padding-screen-x: calc-size(22px);
+	
+	.device-surface-book {
+		height: $device-size-y;
+		width: $device-size-x;
+	
+		.device-frame {
+			border-radius: calc-size(12px);
+			height: calc-size(408px);
+			padding: $padding-screen-y $padding-screen-x;
+			width: calc-size(584px);
+		}
+	
+		.device-content {
+			height: calc-size(360px);
+			width: calc-size(540px);
+		}
+	
+		.device-btns {
+			&::after,
+			&::before {
+				height: calc-size(2px);
+				top: calc-size(-2px);
+			}
+	
+			&::after {
+				left: calc-size(122px);
+				width: calc-size(20px);
+			}
+			&::before {
+				left: calc-size(168px);
+				width: calc-size(44px);
+			}
+		}
+	
+		.device-power {
+			height: calc-size(12px);
+			margin-top: calc-size(4px);
+			width: calc-size(728px);
+	
+			&::after {
+				height: calc-size(8px);
+				margin-left: calc-size(-125px);
+				width: calc-size(250px);
+			}
+			&::before {
+				bottom: calc-size(12px);
+				height: calc-size(8px);
+				margin-left: calc-size(-292px);
+				width: calc-size(584px);
+			}
+		}
+	}
+}
+
+@media screen and (min-width: 1400px) {
+	$device-size-x: 860px;
+	$device-size-y: ($device-size-x * $device-multi-y);
+	
+	@function calc-size($px) {
+		@return new-size($px, $baseY, $device-size-y);
+	}
+	
+	$padding-screen-y: calc-size(24px);
+	$padding-screen-x: calc-size(22px);
+	
+	.device-surface-book {
+		height: $device-size-y;
+		width: $device-size-x;
+	
+		.device-frame {
+			border-radius: calc-size(12px);
+			height: calc-size(408px);
+			padding: $padding-screen-y $padding-screen-x;
+			width: calc-size(584px);
+		}
+	
+		.device-content {
+			height: calc-size(360px);
+			width: calc-size(540px);
+
+			.slick-dots {
+				bottom: calc-size(-75px);
+			}
+		}
+	
+		.device-btns {
+			&::after,
+			&::before {
+				height: calc-size(2px);
+				top: calc-size(-2px);
+			}
+	
+			&::after {
+				left: calc-size(122px);
+				width: calc-size(20px);
+			}
+			&::before {
+				left: calc-size(168px);
+				width: calc-size(44px);
+			}
+		}
+	
+		.device-power {
+			height: calc-size(12px);
+			margin-top: calc-size(4px);
+			width: calc-size(728px);
+	
+			&::after {
+				height: calc-size(8px);
+				margin-left: calc-size(-125px);
+				width: calc-size(250px);
+			}
+			&::before {
+				bottom: calc-size(12px);
+				height: calc-size(8px);
+				margin-left: calc-size(-292px);
+				width: calc-size(584px);
+			}
+		}
+	}
 }

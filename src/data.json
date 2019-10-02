@@ -7,14 +7,17 @@
 			"frame": "device-iphone-8",
 			"type": "phone",
 			"icon": "apple-brands.svg",
+			"grid": [4,8],
 			"tutorial": [
 				{
 					"title": "Stap 1",
 					"desc": "step 1",
 					"tooltip": [
 						{
-							"x": 19,
+							"x": 18,
 							"y": 48,
+							"subX": 3,
+							"subY": 1,
 							"title": "Wachtwoorden en accounts"
 						}
 					]
@@ -32,6 +35,7 @@
 			"frame": "device-ipad-pro device-gold",
 			"type": "tablet",
 			"icon": "apple-brands.svg",
+			"grid": [4,8],
 			"tutorial": [
 				{
 					"title": "Stap 1, open instellingen",
@@ -74,7 +78,19 @@
 			"frame": "device-google-pixel device-blue",
 			"type": "phone",
 			"icon": "android-brands.svg",
+			"grid": [4,8],
 			"tutorial": [
+				{
+					"title": "Stap 1",
+					"desc": "step 1",
+					"tooltip": [
+						{
+							"x": 19,
+							"y": 48,
+							"title": "Wachtwoorden en accounts"
+						}
+					]
+				},
 				{
 					"title": "Stap 1",
 					"desc": "step 1",
@@ -95,17 +111,35 @@
 			"frame": "device-macbook-pro",
 			"type": "laptop",
 			"icon": "apple-brands.svg",
+			"grid": [12,12],
 			"tutorial": [
 				{
-					"title": "Stap 1",
-					"desc": "step 1",
-					"tooltip": [
-						{
-							"x": 19,
-							"y": 48,
-							"title": "Wachtwoorden en accounts"
-						}
-					]
+					"title": "Stap 1: open de app",
+					"desc": "Start Apple mail door op het <span class='text-primary'>mail icoon</span> te klikken."
+				},
+				{
+					"title": "Stap 2: account-type kiezen",
+					"desc": "Selecteer <span class='text-primary'>andere mail-account</span> en klik op ga door."
+				},
+				{
+					"title": "Stap 3: gegevens invoeren",
+					"desc": "Neem de <span class='text-primary'>gegevens hieronder</span> over en klik op log in."
+				},
+				{
+					"title": "Stap 4: aanvullende gegevens",
+					"desc": "Neem de <span class='text-primary'>gegevens hieronder</span> over en klik op log in."
+				},
+				{
+					"title": "Stap 5: certificaat",
+					"desc": "In sommige gevallen krijgt u een <span class='text-primary'>certificaat error</span>.<br><small class=\"font-italic\">Krijgt u deze fout niet, sla dan de <span class='text-primary'>huidige stap</span> en de <span class='text-primary'>volgende stap</span> over.</small>"
+				},
+				{
+					"title": "Stap 6: certificaat accepteren",
+					"desc": "Om het certificaat te accepteren moet u de <span class='text-primary'>gebruikers gegevens</span> van uw mac account invoeren."
+				},
+				{
+					"title": "Stap 7: Uw bent klaar",
+					"desc": "De mail is nu ingesteld, klik op <span class='text-primary'>gereed</span> om de mail te gebruiken."
 				}
 			]
 		},
@@ -116,17 +150,55 @@
 			"frame": "device-surface-book",
 			"type": "laptop",
 			"icon": "windows-brands.svg",
+			"grid": [12,12],
 			"tutorial": [
 				{
 					"title": "Stap 1",
-					"desc": "step 1",
-					"tooltip": [
-						{
-							"x": 19,
-							"y": 48,
-							"title": "Wachtwoorden en accounts"
-						}
-					]
+					"desc": "step 1"
+				},
+				{
+					"title": "Stap 2",
+					"desc": "step 1"
+				},
+				{
+					"title": "Stap 3",
+					"desc": "step 1"
+				},
+				{
+					"title": "Stap 4",
+					"desc": "step 1"
+				},
+				{
+					"title": "Stap 5",
+					"desc": "step 1"
+				},
+				{
+					"title": "Stap 6",
+					"desc": "step 1"
+				},
+				{
+					"title": "Stap 7",
+					"desc": "step 1"
+				},
+				{
+					"title": "Stap 8",
+					"desc": "step 1"
+				},
+				{
+					"title": "Stap 9",
+					"desc": "step 1"
+				},
+				{
+					"title": "Stap 10",
+					"desc": "step 1"
+				},
+				{
+					"title": "Stap 11",
+					"desc": "step 1"
+				},
+				{
+					"title": "Stap 12",
+					"desc": "step 1"
 				}
 			]
 		}
