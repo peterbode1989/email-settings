@@ -111,25 +111,31 @@
 			"tutorial": [
 				{
 					"title": "Stap 1",
-					"desc": "step 1",
-					"tooltip": [
-						{
-							"x": 19,
-							"y": 48,
-							"title": "Wachtwoorden en accounts"
-						}
-					]
+					"desc": "step 1"
 				},
 				{
 					"title": "Stap 1",
-					"desc": "step 1",
-					"tooltip": [
-						{
-							"x": 19,
-							"y": 48,
-							"title": "Wachtwoorden en accounts"
-						}
-					]
+					"desc": "step 1"
+				},
+				{
+					"title": "Stap 1",
+					"desc": "step 1"
+				},
+				{
+					"title": "Stap 1",
+					"desc": "step 1"
+				},
+				{
+					"title": "Stap 1",
+					"desc": "step 1"
+				},
+				{
+					"title": "Stap 1",
+					"desc": "step 1"
+				},
+				{
+					"title": "Stap 1",
+					"desc": "step 1"
 				}
 			]
 		},
@@ -143,25 +149,51 @@
 			"tutorial": [
 				{
 					"title": "Stap 1",
-					"desc": "step 1",
-					"tooltip": [
-						{
-							"x": 19,
-							"y": 48,
-							"title": "Wachtwoorden en accounts"
-						}
-					]
+					"desc": "step 1"
 				},
 				{
-					"title": "Stap 1",
-					"desc": "step 1",
-					"tooltip": [
-						{
-							"x": 19,
-							"y": 48,
-							"title": "Wachtwoorden en accounts"
-						}
-					]
+					"title": "Stap 2",
+					"desc": "step 1"
+				},
+				{
+					"title": "Stap 3",
+					"desc": "step 1"
+				},
+				{
+					"title": "Stap 4",
+					"desc": "step 1"
+				},
+				{
+					"title": "Stap 5",
+					"desc": "step 1"
+				},
+				{
+					"title": "Stap 6",
+					"desc": "step 1"
+				},
+				{
+					"title": "Stap 7",
+					"desc": "step 1"
+				},
+				{
+					"title": "Stap 8",
+					"desc": "step 1"
+				},
+				{
+					"title": "Stap 9",
+					"desc": "step 1"
+				},
+				{
+					"title": "Stap 10",
+					"desc": "step 1"
+				},
+				{
+					"title": "Stap 11",
+					"desc": "step 1"
+				},
+				{
+					"title": "Stap 12",
+					"desc": "step 1"
 				}
 			]
 		}

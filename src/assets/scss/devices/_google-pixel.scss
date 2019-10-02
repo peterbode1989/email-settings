@@ -43,6 +43,10 @@ $padding-screen-x: calc-size(18px);
 		border-radius: 2px;
 		height: ($device-size-y - ($padding-screen-y * 2));
 		width: ($device-size-x - ($padding-screen-x * 2));
+
+		.slick-dots {
+			bottom: calc-size(-135px);
+		}
 	}
 
 	.device-stripe {
@@ -205,6 +209,10 @@ $padding-screen-x: calc-size(18px);
 		.device-content {
 			height: ($device-size-y - ($padding-screen-y * 2));
 			width: ($device-size-x - ($padding-screen-x * 2));
+
+			.slick-dots {
+				bottom: calc-size(-135px);
+			}
 		}
 	
 		.device-stripe {

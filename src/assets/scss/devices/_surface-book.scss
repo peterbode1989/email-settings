@@ -192,6 +192,10 @@ $padding-screen-x: calc-size(22px);
 		.device-content {
 			height: calc-size(360px);
 			width: calc-size(540px);
+
+			.slick-dots {
+				bottom: calc-size(-75px);
+			}
 		}
 	
 		.device-btns {
