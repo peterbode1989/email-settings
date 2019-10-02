@@ -71,6 +71,10 @@ export default {
 	},
 	data() {
 		return {
+			address: {
+				name: "",
+				domain: ""
+			},
 			slickOptionsText: {
 				slidesToShow: 1,
 				dots: false,
@@ -101,8 +105,15 @@ export default {
 			);
 		}
 	},
-	beforeCreate() {
-		console.log('show?');
+	created: function() {
+		let email = this.$route.query.email;
+		let index = email.lastIndexOf("@");
+		let name = email.substring(0, index);
+		let domain = email.substring(index + 1);
+		this.address = { name, domain };
+		// let test = splitEmail(this.$route.query.email);
+		// console.log(test)
+		// console.log(this.$route.query.email);
 	}
 };
 </script>
