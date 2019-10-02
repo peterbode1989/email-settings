@@ -1,7 +1,7 @@
 <template>
 	<b-container class="details">
 		<b-row align-v="center">
-			<b-col cols="6">
+			<b-col cols="4">
 				<h1>E-mail instellen</h1>
 				<p class="lead mb-4">
 					Hieronder is een handleiding gemaakt voor het instellen van
@@ -20,7 +20,7 @@
 				</slick>
 			</b-col>
 
-			<b-col cols="6" class="text-right">
+			<b-col cols="8" class="text-center">
 				<div class="device" v-bind:class="device.frame">
 					<div class="device-frame">
 						<div class="device-content">

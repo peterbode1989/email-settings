@@ -218,7 +218,7 @@ $padding-screen-x: calc-size(22px);
 	}
 }
 
-@media screen and (min-width: 1366px) {
+@media screen and (min-width: 1200px) {
 	$device-size-x: 419px;
 	$device-size-y: ($device-size-x * $device-multi-y);
 
