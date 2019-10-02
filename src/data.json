@@ -13,8 +13,10 @@
 					"desc": "step 1",
 					"tooltip": [
 						{
-							"x": 19,
+							"x": 18,
 							"y": 48,
+							"subX": 3,
+							"subY": 1,
 							"title": "Wachtwoorden en accounts"
 						}
 					]

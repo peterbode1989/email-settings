@@ -10,7 +10,7 @@
 			> div.overlay-item {
 				color: theme-color('primary');
 				
-				font-weight: 400;
+				font-weight: 500;
 
 				text-align: left;
 				position: absolute;
@@ -42,8 +42,8 @@
 
 						@for $o from 0 through 100 {
 							&-#{$o} {
-								$offset: $offset + round(percentage($o/100));
-								top: $offset;
+								$newOffset: $offset + (round(percentage($o/100)) /100);
+								top: $newOffset;
 							}
 						}
 					}
@@ -53,8 +53,8 @@
 
 						@for $o from 0 through 100 {
 							&-#{$o} {
-								$offset: $offset + round(percentage($o/100));
-								left: $offset;
+								$newOffset: $offset + (round(percentage($o/100)) /100);
+								left: $newOffset;
 							}
 						}
 					}

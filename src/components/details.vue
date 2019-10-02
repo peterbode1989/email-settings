@@ -40,7 +40,7 @@
 											class="overlay-item"
 											v-for="(tip, o) in step.tooltip"
 											v-bind:key="o"
-											v-bind:class="['x-'+tip.x, 'y-'+tip.y]"
+											v-bind:class="['x-' + tip.x + (typeof tip.subX != 'undefined' ? '-' + tip.subX : ''), 'y-' + tip.y + (typeof tip.subY != 'undefined' ? '-' + tip.subY : '')]"
 										>
 											<span v-if="tip.title">{{ tip.title }}</span>
 										</div>
