@@ -62,7 +62,7 @@ body {
 	
 					.device-type {
 						display: inline-block;
-						width: 80px;
+						width: 100px;
 						height: 60px;
 						background-size: contain;
 						background-position: center;
@@ -97,7 +97,10 @@ body {
 						display: flex;
 						justify-content: center;
 						flex-direction: column;
-						min-height: 98px;
+
+						@include media-breakpoint-down(md) {
+							min-height: 98px;
+						}
 					}
 				}
 			}
