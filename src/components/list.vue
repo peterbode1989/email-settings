@@ -11,7 +11,7 @@
 
 					<b-row class="mt-5">
 						<b-col cols="12" md="4" class="device-holder" v-bind:key="device.id" v-for="device in devices">
-							<Device v-bind:device="device" v-bind:email="email" />
+							<Item v-bind:device="device" v-bind:email="email" />
 						</b-col>
 					</b-row>
 				</b-col>
@@ -21,12 +21,12 @@
 </template>
 
 <script>
-import Device from "./device";
+import Item from "./item";
 export default {
 	name: "Devices",
 	props: ["devices", "email"],
 	components: {
-		Device
+		Item
 	}
 };
 </script>

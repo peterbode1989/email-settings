@@ -100,6 +100,9 @@ export default {
 				device => device.slug === this.$route.params.device
 			);
 		}
+	},
+	beforeCreate() {
+		console.log('show?');
 	}
 };
 </script>
