@@ -37,10 +37,26 @@
 
 				@for $i from 0 through 100 {
 					&.y-#{$i} {
-						top: round(percentage($i/100));
+						$offset: round(percentage($i/100));
+						top: $offset;
+
+						@for $o from 0 through 100 {
+							&-#{$o} {
+								$offset: $offset + round(percentage($o/100));
+								top: $offset;
+							}
+						}
 					}
 					&.x-#{$i} {
-						left: round(percentage($i/100));
+						$offset: round(percentage($i/100));
+						left: $offset;
+
+						@for $o from 0 through 100 {
+							&-#{$o} {
+								$offset: $offset + round(percentage($o/100));
+								left: $offset;
+							}
+						}
 					}
 				}
 

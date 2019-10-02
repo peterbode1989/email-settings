@@ -13,8 +13,9 @@ export default {
 		};
 	},
 	mounted() {
-		if (!this.$route.query.email) {
-			this.$router.replace({ name: "login" });
+		if (!this.$route.query.email
+			&& this.$router.currentRoute.name != 'auth') {
+			this.$router.replace({ name: "auth" });
 		}
 	}
 };

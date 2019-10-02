@@ -1,17 +1,18 @@
 <template>
 	<section id="overview" class="h-100">
-		<Devices v-bind:devices="devices" v-bind:email="email" />
+		<List v-bind:devices="devices" v-bind:email="email" />
 	</section>
 </template>
 
 <script>
-import Devices from "./devices";
+// import Devices from "./devices";
+import List from './list';
 
 export default {
 	name: "Overview",
 	props: ["email"],
 	components: {
-		Devices
+		List
 	},
 	computed: {
 		devices() {

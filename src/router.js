@@ -3,23 +3,17 @@ import Router from 'vue-router';
 
 Vue.use(Router);
 
-import LoginComponent from './components/login.vue';
-import OverviewComponent from './components/overview.vue';
 import DetailsComponent from './components/details.vue';
+import AuthComponent from './components/auth.vue';
+import OverviewComponent from './components/overview.vue';
 
 export default new Router({
 	mode: 'history',
 	routes: [
 		{
 			path: '/',
-			redirect: {
-				name: 'login'
-			}
-		},
-		{
-			path: '/login',
-			name: 'login',
-			component: LoginComponent
+			name: 'auth',
+			component: AuthComponent
 		},
 		{
 			path: '/overview',
@@ -32,6 +26,12 @@ export default new Router({
 			name: 'details',
 			component: DetailsComponent,
 			props: true
-		}
+		},
+		{
+			path: '*',
+			redirect: {
+				name: 'auth'
+			}
+		},
 	]
 });

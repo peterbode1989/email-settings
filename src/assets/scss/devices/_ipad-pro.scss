@@ -16,11 +16,15 @@ $baseY: 804px;
 $baseX: 560px;
 
 $device-multi-y: $baseY / $baseX;
-$device-size-x: 400px;
+$device-size-x: 375px;
 $device-size-y: ($device-size-x * $device-multi-y);
 
-$padding-screen-y: new-size(62px, $baseY, $device-size-y);
-$padding-screen-x: new-size(25px, $baseX, $device-size-x);
+@function calc-size($px) {
+	@return new-size($px, $baseY, $device-size-y);
+}
+
+$padding-screen-y: calc-size(62px);
+$padding-screen-x: calc-size(25px);
 
 .device-ipad-pro {
 	height: $device-size-y;
@@ -29,7 +33,7 @@ $padding-screen-x: new-size(25px, $baseX, $device-size-x);
 	.device-frame {
 		box-sizing: border-box;
 		background: $device-silver-panel;
-		border-radius: new-size(38px, $baseY, $device-size-y);
+		border-radius: calc-size(38px);
 		box-shadow: inset 0 0 0 2px $device-silver-dark,
 			inset 0 0 0 6px $device-silver;
 		height: 100%;
@@ -44,11 +48,38 @@ $padding-screen-x: new-size(25px, $baseX, $device-size-x);
 
 		height: ($device-size-y - ($padding-screen-y * 2));
 		width: ($device-size-x - ($padding-screen-x * 2));
+
+		div.overlay {
+			> div.overlay-item {
+				font-size: calc-size(20px);
+				line-height: calc-size(42px);
+
+				&:before {
+					top: 3px;
+					right: -10px;
+					bottom: 3px;
+					left: -5px;
+				}
+
+				&[class*="spam"] {
+					&:after {
+						top: 0;
+						right: -5px;
+						bottom: 0;
+						left: -5px;
+					}
+				}
+			}
+		}
+
+		.slick-dots {
+			bottom: calc-size(-125px);
+		}
 	}
 
 	// Home button
 	.device-header {
-		$newDim: new-size(34px, $baseY, $device-size-y);
+		$newDim: calc-size(34px);
 
 		border: 2px solid $device-silver-dark;
 		border-radius: 50%;
@@ -61,7 +92,7 @@ $padding-screen-x: new-size(25px, $baseX, $device-size-x);
 	}
 
 	.device-sensors {
-		$newDim: new-size(10px, $baseY, $device-size-y);
+		$newDim: calc-size(10px);
 
 		background: #666;
 		border-radius: 50%;
@@ -70,7 +101,7 @@ $padding-screen-x: new-size(25px, $baseX, $device-size-x);
 		margin-left: -($newDim/2);
 		margin-top: -($newDim/2);
 		position: absolute;
-		top: new-size(34px, $baseY, $device-size-y);
+		top: calc-size(34px);
 		width: $newDim;
 	}
 
@@ -108,6 +139,57 @@ $padding-screen-x: new-size(25px, $baseX, $device-size-x);
 
 		.device-header {
 			border-color: $device-spacegray-dark;
+		}
+	}
+}
+
+
+@media screen and (min-width: 1366px) {
+	$device-size-x: 540px;
+	$device-size-y: ($device-size-x * $device-multi-y);
+
+	@function calc-size($px) {
+		@return new-size($px, $baseY, $device-size-y);
+	}
+
+	$padding-screen-y: calc-size(62px);
+	$padding-screen-x: calc-size(25px);
+
+	.device-ipad-pro {
+		height: $device-size-y;
+		width: $device-size-x;
+
+		.device-frame {
+			border-radius: calc-size(38px);
+			padding: $padding-screen-y $padding-screen-x;
+		}
+
+		// 2224-by-1668-pixel resolution
+		.device-content {
+			height: ($device-size-y - ($padding-screen-y * 2));
+			width: ($device-size-x - ($padding-screen-x * 2));
+
+			.slick-dots {
+				bottom: calc-size(-125px);
+			}
+		}
+
+		// Home button
+		.device-header {
+			$newDim: calc-size(34px);
+			bottom: $newDim/2;
+			height: $newDim;
+			margin-left: -($newDim/2);
+			width: $newDim;
+		}
+
+		.device-sensors {
+			$newDim: calc-size(10px);
+			height: $newDim;
+			margin-left: -($newDim/2);
+			margin-top: -($newDim/2);
+			top: calc-size(34px);
+			width: $newDim;
 		}
 	}
 }

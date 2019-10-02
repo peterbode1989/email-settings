@@ -1,12 +1,19 @@
+$enable-responsive-font-sizes: true;
+
 $font-family-sans-serif: 'Roboto', sans-serif;
 
 $purple: #6d75e5;
+$red: #e56d71;
+$yellow: #e5e36d;
 
 $theme-colors: (
-  "primary": $purple
+  "primary": $purple,
+  "danger": $red,
+  "warning": $yellow
 );
 
 $link-color: $purple;
+$link-hover-decoration: none;
 
 $box-shadow: 0 0.3125rem 0.875rem 0 rgba(129, 129, 129, 0.2);
 

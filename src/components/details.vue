@@ -20,7 +20,7 @@
 				</slick>
 			</b-col>
 
-			<b-col cols="6" class="text-center">
+			<b-col cols="6" class="text-right">
 				<div class="device" v-bind:class="device.frame">
 					<div class="device-frame">
 						<div class="device-content">
@@ -100,6 +100,9 @@ export default {
 				device => device.slug === this.$route.params.device
 			);
 		}
+	},
+	beforeCreate() {
+		console.log('show?');
 	}
 };
 </script>
