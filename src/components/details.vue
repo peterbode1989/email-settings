@@ -9,7 +9,7 @@
 						class="text-primary"
 					>{{ email }}</span>
 					op de {{ device.name }}.
-				</p> -->
+				</p>-->
 
 				<slick class="slider-nav" ref="slick" :options="slickOptionsText">
 					<div
@@ -91,10 +91,14 @@ export default {
 			slickOptionsDevice: {
 				slidesToShow: 1,
 				dots: true,
-				arrows: false,
+				arrows: true,
 				infinite: false,
 				fade: true,
-				asNavFor: ".slider-nav"
+				asNavFor: ".slider-nav",
+				prevArrow:
+					'<button type="button" class="btn btn-link slick-prev"><span>Vorige stap</span><span></span></button>',
+				nextArrow:
+					'<button type="button" class="btn btn-link slick-next"><span>Volgende stap</span><span></span></button>'
 			}
 		};
 	},
