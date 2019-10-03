@@ -261,7 +261,7 @@ $padding-screen-x: calc-size(19px);
 		@return new-size($px, $baseY, $device-size-y);
 	}
 	
-	$device-size-x: 1150px;
+	$device-size-x: 1100px;
 	$device-size-y: ($device-size-x * $device-multi-y);
 	
 	$padding-screen-y: calc-size(29px);
@@ -316,7 +316,7 @@ $padding-screen-x: calc-size(19px);
 			width: calc-size(576px);
 
 			.slick-dots {
-				bottom: calc-size(-100px);
+				bottom: calc-size(-85px);
 			}
 		}
 

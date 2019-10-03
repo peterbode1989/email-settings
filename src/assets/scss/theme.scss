@@ -134,10 +134,14 @@ body {
 
 				&:not(.text-center) {
 					padding-bottom: 2rem;
+
+					.slick-arrow {
+						display: none!important;
+					}
 				}
 
 				.slick-arrow {
-					top: 25vh;
+					top: 50%;
 					width: 50px;
 					height: 50px;
 					opacity: .75;
@@ -153,16 +157,23 @@ body {
 					}
 
 					&.slick-prev {
-						left: -55px;
+						left: -100px;
 					}
 
 					&.slick-next {
-						right: -55px;
+						right: -100px;
 					}
 
 					&:hover {
 						opacity: 1;
 					}
+				}
+
+			}
+			
+			> div.col-8 {
+				.slick-arrow {
+					display: none!important;
 				}
 			}
 		}
