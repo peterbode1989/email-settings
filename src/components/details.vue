@@ -42,7 +42,7 @@
 											v-bind:key="o"
 											v-bind:class="['x-' + tip.x + (typeof tip.subX != 'undefined' ? '-' + tip.subX : ''), 'y-' + tip.y + (typeof tip.subY != 'undefined' ? '-' + tip.subY : '')]"
 										>
-											<span v-if="tip.title">{{ tip.title }}</span>
+											<span v-if="tip.title" v-html="tip.title"></span>
 										</div>
 									</div>
 								</div>
@@ -115,6 +115,19 @@ export default {
 		let name = email.substring(0, index);
 		let domain = email.substring(index + 1);
 		this.address = { name, domain };
+
+		var elms = document.getElementsByClassName('overlay-item');
+
+		for (let elm of elms) {
+			let val = elm.firstChild.innerHTML;
+			if(val == '[name]') {
+				elm.firstChild.innerHTML = name;
+			} else if(val == '[domain]') {
+				elm.firstChild.innerHTML = domain;
+			} else if(val == '[email]') {
+				elm.firstChild.innerHTML = email;
+			}
+		}
 	}
 };
 </script>

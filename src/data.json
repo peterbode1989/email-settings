@@ -123,7 +123,16 @@
 				},
 				{
 					"title": "Stap 3: gegevens invoeren",
-					"desc": "Neem de <span class='text-primary'>gegevens hieronder</span> over en klik op log in."
+					"desc": "Neem de <span class='text-primary'>gegevens hieronder</span> over en klik op log in.",
+					"tooltip": [
+						{
+							"x": 44,
+							"subX": 25,
+							"y": 24,
+							"subY": 25,
+							"title": "[name]"
+						}
+					]
 				},
 				{
 					"title": "Stap 4: aanvullende gegevens",
