@@ -18,7 +18,7 @@
 							"y": 48,
 							"subX": 3,
 							"subY": 1,
-							"title": "Wachtwoorden en accounts"
+							"value": "Wachtwoorden en accounts"
 						}
 					]
 				},
@@ -87,7 +87,7 @@
 						{
 							"x": 19,
 							"y": 48,
-							"title": "Wachtwoorden en accounts"
+							"value": "Wachtwoorden en accounts"
 						}
 					]
 				},
@@ -98,7 +98,7 @@
 						{
 							"x": 19,
 							"y": 48,
-							"title": "Wachtwoorden en accounts"
+							"value": "Wachtwoorden en accounts"
 						}
 					]
 				}
@@ -127,24 +127,102 @@
 					"tooltip": [
 						{
 							"x": 44,
-							"subX": 25,
+							"subX": 35,
 							"y": 24,
 							"subY": 25,
-							"title": "[name]"
+							"value": "Vul uw naam in"
+						},
+						{
+							"x": 44,
+							"subX": 35,
+							"y": 28,
+							"value": "[email]"
+						},
+						{
+							"x": 44,
+							"subX": 35,
+							"y": 32,
+							"subY": 10,
+							"value": "Vul uw wachtwoord in"
 						}
 					]
 				},
 				{
 					"title": "Stap 4: aanvullende gegevens",
-					"desc": "Neem de <span class='text-primary'>gegevens hieronder</span> over en klik op log in."
+					"desc": "Neem de <span class='text-primary'>gegevens hieronder</span> over en klik op log in.",
+					"tooltip": [
+						{
+							"x": 48,
+							"subX": 65,
+							"y": 16,
+							"subY": 85,
+							"value": "[email]"
+						},
+						{
+							"x": 48,
+							"subX": 65,
+							"y": 20,
+							"subY": 85,
+							"value": "[email]"
+						},
+						{
+							"x": 48,
+							"subX": 65,
+							"y": 24,
+							"subY": 85,
+							"value": "Vul uw wachtwoord in"
+						},
+						{
+							"x": 48,
+							"subX": 65,
+							"y": 34,
+							"value": "mail.[domain]"
+						},
+						{
+							"x": 48,
+							"subX": 65,
+							"y": 38,
+							"value": "mail.[domain]"
+						}
+					]
 				},
 				{
 					"title": "Stap 5: certificaat",
-					"desc": "In sommige gevallen krijgt u een <span class='text-primary'>certificaat error</span>.<br><small class=\"font-italic\">Krijgt u deze fout niet, sla dan de <span class='text-primary'>huidige stap</span> en de <span class='text-primary'>volgende stap</span> over.</small>"
+					"desc": "In sommige gevallen krijgt u een <span class='text-primary'>certificaat error</span>.<br><small class=\"font-italic\">Krijgt u deze fout niet, sla dan de <span class='text-primary'>huidige stap</span> en de <span class='text-primary'>volgende stap</span> over.</small>",
+					"tooltip": [
+						{
+							"x": 48,
+							"subX": 65,
+							"y": 34,
+							"value": "mail.[domain]"
+						},
+						{
+							"x": 48,
+							"subX": 65,
+							"y": 38,
+							"value": "mail.[domain]"
+						}
+					]
 				},
 				{
 					"title": "Stap 6: certificaat accepteren",
-					"desc": "Om het certificaat te accepteren moet u de <span class='text-primary'>gebruikers gegevens</span> van uw mac account invoeren."
+					"desc": "Om het certificaat te accepteren moet u de <span class='text-primary'>gebruikers gegevens</span> van uw mac account invoeren.",
+					"tooltip": [
+						{
+							"x": 49,
+							"subX": 10,
+							"y": 29,
+							"subY": 70,
+							"value": "Gebruikersnaam van de Mac"
+						},
+						{
+							"x": 49,
+							"subX": 10,
+							"y": 33,
+							"subY": 40,
+							"value": "Wachtwoord van de Mac"
+						}
+					]
 				},
 				{
 					"title": "Stap 7: Uw bent klaar",

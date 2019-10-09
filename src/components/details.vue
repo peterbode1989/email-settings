@@ -2,15 +2,6 @@
 	<b-container class="details">
 		<b-row align-v="center">
 			<b-col v-bind:cols="device.grid[0]">
-				<!-- <h1>E-mail instellen</h1>
-				<p class="lead mb-4">
-					Hieronder is een handleiding gemaakt voor het instellen van
-					<span
-						class="text-primary"
-					>{{ email }}</span>
-					op de {{ device.name }}.
-				</p>-->
-
 				<slick class="slider-nav" ref="slick" :options="slickOptionsText">
 					<div
 						v-for="(step, index) in device.tutorial"
@@ -42,7 +33,7 @@
 											v-bind:key="o"
 											v-bind:class="['x-' + tip.x + (typeof tip.subX != 'undefined' ? '-' + tip.subX : ''), 'y-' + tip.y + (typeof tip.subY != 'undefined' ? '-' + tip.subY : '')]"
 										>
-											<span v-if="tip.title" v-html="tip.title"></span>
+											<span v-if="tip.value" v-html="tip.value"></span>
 										</div>
 									</div>
 								</div>
@@ -90,6 +81,7 @@ export default {
 			},
 			slickOptionsDevice: {
 				slidesToShow: 1,
+				// initialSlide: 5, // Used for debugging
 				dots: true,
 				arrows: true,
 				infinite: false,
@@ -109,7 +101,7 @@ export default {
 			);
 		}
 	},
-	created: function() {
+	mounted: function() {
 		let email = this.$route.query.email;
 		let index = email.lastIndexOf("@");
 		let name = email.substring(0, index);
@@ -117,16 +109,19 @@ export default {
 		this.address = { name, domain };
 
 		var elms = document.getElementsByClassName('overlay-item');
+		console.log(elms);
 
 		for (let elm of elms) {
+			let str = '';
 			let val = elm.firstChild.innerHTML;
-			if(val == '[name]') {
-				elm.firstChild.innerHTML = name;
-			} else if(val == '[domain]') {
-				elm.firstChild.innerHTML = domain;
-			} else if(val == '[email]') {
-				elm.firstChild.innerHTML = email;
+			if(val.includes('[name]')) {
+				str = val.replace('[name]', name);
+			} else if(val.includes('[domain]')) {
+				str = val.replace('[domain]', domain);
+			} else if(val.includes('[email]')) {
+				str = val.replace('[email]', email);
 			}
+			if(str != '') elm.firstChild.innerHTML = str;
 		}
 	}
 };
