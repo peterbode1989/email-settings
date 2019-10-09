@@ -2,20 +2,11 @@
 	<b-container class="details">
 		<b-row align-v="center">
 			<b-col v-bind:cols="device.grid[0]">
-				<!-- <h1>E-mail instellen</h1>
-				<p class="lead mb-4">
-					Hieronder is een handleiding gemaakt voor het instellen van
-					<span
-						class="text-primary"
-					>{{ email }}</span>
-					op de {{ device.name }}.
-				</p>-->
-
 				<slick class="slider-nav" ref="slick" :options="slickOptionsText">
 					<div
 						v-for="(step, index) in device.tutorial"
 						v-bind:key="index"
-						v-html="'<h1>' + step.title + '</h1><p>' + step.desc + '</p>'"
+						v-html="'<h1 class=\'step_title\'>' + step.title + '</h1><p class=\'step_desc\'>' + step.desc + '</p>'"
 					></div>
 				</slick>
 			</b-col>
@@ -42,7 +33,7 @@
 											v-bind:key="o"
 											v-bind:class="['x-' + tip.x + (typeof tip.subX != 'undefined' ? '-' + tip.subX : ''), 'y-' + tip.y + (typeof tip.subY != 'undefined' ? '-' + tip.subY : '')]"
 										>
-											<span v-if="tip.title">{{ tip.title }}</span>
+											<span v-if="tip.value" v-html="tip.value"></span>
 										</div>
 									</div>
 								</div>
@@ -77,6 +68,7 @@ export default {
 			},
 			slickOptionsText: {
 				slidesToShow: 1,
+				// initialSlide: 8, // Used for debugging
 				dots: false,
 				arrows: true,
 				infinite: false,
@@ -90,6 +82,7 @@ export default {
 			},
 			slickOptionsDevice: {
 				slidesToShow: 1,
+				// initialSlide: 8, // Used for debugging
 				dots: true,
 				arrows: true,
 				infinite: false,
@@ -109,12 +102,27 @@ export default {
 			);
 		}
 	},
-	created: function() {
+	mounted: function() {
 		let email = this.$route.query.email;
 		let index = email.lastIndexOf("@");
 		let name = email.substring(0, index);
 		let domain = email.substring(index + 1);
 		this.address = { name, domain };
+
+		var elms = document.getElementsByClassName('overlay-item');
+
+		for (let elm of elms) {
+			let str = '';
+			let val = elm.firstChild.innerHTML;
+			if(val.includes('[name]')) {
+				str = val.replace('[name]', name);
+			} else if(val.includes('[domain]')) {
+				str = val.replace('[domain]', domain);
+			} else if(val.includes('[email]')) {
+				str = val.replace('[email]', email);
+			}
+			if(str != '') elm.firstChild.innerHTML = str;
+		}
 	}
 };
 </script>

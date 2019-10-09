@@ -67,6 +67,13 @@ $padding-screen-x: calc-size(19px);
 		border-radius: 2px;
 		height: calc-size(360px);
 		width: calc-size(576px);
+
+		div.overlay {
+			> div.overlay-item {
+				font-size: calc-size(7px);
+				line-height: calc-size(12px);
+			}
+		}
 	}
 
 	.device-power {
@@ -188,6 +195,13 @@ $padding-screen-x: calc-size(19px);
 			border-radius: 2px;
 			height: calc-size(360px);
 			width: calc-size(576px);
+
+			div.overlay {
+				> div.overlay-item {
+					font-size: calc-size(7px);
+					line-height: calc-size(12px);
+				}
+			}
 
 			.slick-dots {
 				bottom: calc-size(-100px);
@@ -314,6 +328,13 @@ $padding-screen-x: calc-size(19px);
 			border-radius: 2px;
 			height: calc-size(360px);
 			width: calc-size(576px);
+
+			div.overlay {
+				> div.overlay-item {
+					font-size: calc-size(7px);
+					line-height: calc-size(12px);
+				}
+			}
 
 			.slick-dots {
 				bottom: calc-size(-85px);

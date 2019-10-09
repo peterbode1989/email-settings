@@ -3,14 +3,14 @@
 		{
 			"id": 1,
 			"name": "iPhone",
-			"slug": "iphone",
+			"slug": "",
 			"frame": "device-iphone-8",
 			"type": "phone",
 			"icon": "apple-brands.svg",
 			"grid": [4,8],
 			"tutorial": [
 				{
-					"title": "Stap 1",
+					"title": "<span>Stap 1:</span>",
 					"desc": "step 1",
 					"tooltip": [
 						{
@@ -18,12 +18,12 @@
 							"y": 48,
 							"subX": 3,
 							"subY": 1,
-							"title": "Wachtwoorden en accounts"
+							"value": "Wachtwoorden en accounts"
 						}
 					]
 				},
 				{
-					"title": "Stap 2",
+					"title": "<span>Stap 2:</span>",
 					"desc": "step 2"
 				}
 			]
@@ -38,35 +38,128 @@
 			"grid": [4,8],
 			"tutorial": [
 				{
-					"title": "Stap 1, open instellingen",
-					"desc": "<p>U dient de app <span class='text-primary'>instellingen</span> te openen.<br>Deze app kunt u herkennen aan de grijze kleur en het tandwiel-icoon.</p>"
+					"title": "<span>Stap 1:</span> open instellingen",
+					"desc": "<p>U dient de app <span>instellingen</span> te openen.<br>Deze app kunt u herkennen aan de grijze kleur en het tandwiel-icoon.</p>"
 				},
 				{
-					"title": "Step 2, wachtwoorden & accounts",
-					"desc": "<p>U dient aan de linkerkant omlaag te scrollen tot dat u het kopje <span class='text-primary'>wachtwoorden en accounts</span> tegenkomt. Klik hierop. </p><p>Vervolgens dient u te kiezen voor de optie <span class='text-primary'>nieuwe account</span>. Dit vind u in de rechter kolom nadat u op <span class='text-primary'>wachtwoorden en accounts</span> heeft gedrukt.</p>"
+					"title": "<span>Step 2:</span> wachtwoorden & accounts",
+					"desc": "<p>U dient aan de linkerkant omlaag te scrollen tot dat u het kopje <span>wachtwoorden en accounts</span> tegenkomt. Klik hierop. </p><p>Vervolgens dient u te kiezen voor de optie <span>nieuwe account</span>. Dit vind u in de rechter kolom nadat u op <span>wachtwoorden en accounts</span> heeft gedrukt.</p>"
 				},
 				{
-					"title": "Step 3, soort account",
-					"desc": "<p>In de rechter kolom dient u op de knop <span class='text-primary'>anders</span> te drukken.</p>"
+					"title": "<span>Step 3:</span> soort account",
+					"desc": "<p>In de rechter kolom dient u op de knop <span>andere</span> te drukken.</p>"
 				},
 				{
-					"title": "Step 4, account aanmaken",
-					"desc": "<p>In de rechter kolom dient u op de knop <span class='text-primary'>voeg mailaccount toe</span> te drukken.</p>"
+					"title": "<span>Step 4:</span> account aanmaken",
+					"desc": "<p>In de rechter kolom dient u op de knop <span>voeg mailaccount toe</span> te drukken.</p>"
 				},
 				{
-					"title": "Step 5, gegevens invullen",
-					"desc": "<p>Neem de door ons ingevoerde gegevens over.<br>Vervolgens dient u op de knop <span class='text-primary'>volgende</span> te drukken.</p>"
+					"title": "<span>Step 5:</span> gegevens invullen",
+					"desc": "<p>Neem de door ons ingevoerde gegevens over.<br>Vervolgens dient u op de knop <span>volgende</span> te drukken.</p>",
+					"tooltip": [
+						{
+							"x": 30,
+							"subX": 20,
+							"y": 28,
+							"subY": 20,
+							"value": "[email]"
+						},
+						{
+							"x": 30,
+							"subX": 20,
+							"y": 32,
+							"subY": 50,
+							"value": "[email]"
+						},
+						{
+							"x": 30,
+							"subX": 20,
+							"y": 36,
+							"subY": 90,
+							"value": "Vul het wachtwoord in"
+						},
+						{
+							"x": 30,
+							"subX": 20,
+							"y": 41,
+							"subY": 30,
+							"value": "[email]"
+						}
+					]
 				},
 				{
-					"title": "Step 6, aanvullende gegevens invullen",
-					"desc": "<p>Neem de door ons ingevoerde gegevens over.<br>Vervolgens dient u op de knop <span class='text-primary'>volgende</span> te drukken.</p>"
+					"title": "<span>Step 6:</span> aanvullende gegevens invullen",
+					"desc": "<p>Neem de door ons ingevoerde gegevens over.<br>Vervolgens dient u op de knop <span>volgende</span> te drukken.</p>",
+					"tooltip": [
+						{
+							"x": 30,
+							"subX": 30,
+							"y": 29,
+							"subY": 30,
+							"value": "Vul uw naam in"
+						},
+						{
+							"x": 30,
+							"subX": 30,
+							"y": 33,
+							"subY": 70,
+							"value": "[email]"
+						},
+						{
+							"x": 30,
+							"subX": 30,
+							"y": 38,
+							"value": "[email]"
+						},
+						{
+							"x": 30,
+							"subX": 30,
+							"y": 47,
+							"subY": 60,
+							"value": "mail.[domain]"
+						},
+						{
+							"x": 34,
+							"subX": 50,
+							"y": 52,
+							"value": "[email]"
+						},
+						{
+							"x": 30,
+							"subX": 30,
+							"y": 56,
+							"subY": 15,
+							"value": "Vul het wachtwoord in"
+						},
+						{
+							"x": 30,
+							"subX": 30,
+							"y": 66,
+							"subY": 15,
+							"value": "mail.[domain]"
+						},
+						{
+							"x": 34,
+							"subX": 50,
+							"y": 70,
+							"subY": 30,
+							"value": "[email]"
+						},
+						{
+							"x": 30,
+							"subX": 30,
+							"y": 74,
+							"subY": 50,
+							"value": "Vul het wachtwoord in"
+						}
+					]
 				},
 				{
-					"title": "Step 7, beveiliging",
+					"title": "<span>Step 7:</span> beveiliging",
 					"desc": "<p>In sommige gevallen krijgt u een certificaat error klik op ga door. Krijgt u deze niet sla deze stap dan over.</p>"
 				},
 				{
-					"title": "Stap 8, succes!",
+					"title": "<span>Stap 8:</span> succes!",
 					"desc": "<p>Kies de optie bewaar.<br>U kan nu alle vensters sluiten en het e-mailadres gebruiken.</p>"
 				}
 			]
@@ -74,7 +167,7 @@
 		{
 			"id": 3,
 			"name": "Android",
-			"slug": "android",
+			"slug": "",
 			"frame": "device-google-pixel device-blue",
 			"type": "phone",
 			"icon": "android-brands.svg",
@@ -87,7 +180,7 @@
 						{
 							"x": 19,
 							"y": 48,
-							"title": "Wachtwoorden en accounts"
+							"value": "Wachtwoorden en accounts"
 						}
 					]
 				},
@@ -98,7 +191,7 @@
 						{
 							"x": 19,
 							"y": 48,
-							"title": "Wachtwoorden en accounts"
+							"value": "Wachtwoorden en accounts"
 						}
 					]
 				}
@@ -114,32 +207,119 @@
 			"grid": [12,12],
 			"tutorial": [
 				{
-					"title": "Stap 1: open de app",
-					"desc": "Start Apple mail door op het <span class='text-primary'>mail icoon</span> te klikken."
+					"title": "<span>Stap 1:</span> open de app",
+					"desc": "Start Apple mail door op het <span>mail icoon</span> te klikken."
 				},
 				{
-					"title": "Stap 2: account-type kiezen",
-					"desc": "Selecteer <span class='text-primary'>andere mail-account</span> en klik op ga door."
+					"title": "<span>Stap 2:</span> account-type kiezen",
+					"desc": "Selecteer <span>andere mail-account</span> en klik op ga door."
 				},
 				{
-					"title": "Stap 3: gegevens invoeren",
-					"desc": "Neem de <span class='text-primary'>gegevens hieronder</span> over en klik op log in."
+					"title": "<span>Stap 3:</span> gegevens invoeren",
+					"desc": "Neem de <span>gegevens hieronder</span> over en klik op log in.",
+					"tooltip": [
+						{
+							"x": 44,
+							"subX": 35,
+							"y": 24,
+							"subY": 25,
+							"value": "Vul uw naam in"
+						},
+						{
+							"x": 44,
+							"subX": 35,
+							"y": 28,
+							"value": "[email]"
+						},
+						{
+							"x": 44,
+							"subX": 35,
+							"y": 32,
+							"subY": 10,
+							"value": "Vul uw wachtwoord in"
+						}
+					]
 				},
 				{
-					"title": "Stap 4: aanvullende gegevens",
-					"desc": "Neem de <span class='text-primary'>gegevens hieronder</span> over en klik op log in."
+					"title": "<span>Stap 4:</span> aanvullende gegevens",
+					"desc": "Neem de <span>gegevens hieronder</span> over en klik op log in.",
+					"tooltip": [
+						{
+							"x": 48,
+							"subX": 65,
+							"y": 16,
+							"subY": 85,
+							"value": "[email]"
+						},
+						{
+							"x": 48,
+							"subX": 65,
+							"y": 20,
+							"subY": 85,
+							"value": "[email]"
+						},
+						{
+							"x": 48,
+							"subX": 65,
+							"y": 24,
+							"subY": 85,
+							"value": "Vul uw wachtwoord in"
+						},
+						{
+							"x": 48,
+							"subX": 65,
+							"y": 34,
+							"value": "mail.[domain]"
+						},
+						{
+							"x": 48,
+							"subX": 65,
+							"y": 38,
+							"value": "mail.[domain]"
+						}
+					]
 				},
 				{
-					"title": "Stap 5: certificaat",
-					"desc": "In sommige gevallen krijgt u een <span class='text-primary'>certificaat error</span>.<br><small class=\"font-italic\">Krijgt u deze fout niet, sla dan de <span class='text-primary'>huidige stap</span> en de <span class='text-primary'>volgende stap</span> over.</small>"
+					"title": "<span>Stap 5:</span> certificaat",
+					"desc": "In sommige gevallen krijgt u een <span>certificaat error</span>.<br><small>Krijgt u deze fout niet, sla dan de <span>huidige stap</span> en de <span>volgende stap</span> over.</small>",
+					"tooltip": [
+						{
+							"x": 48,
+							"subX": 65,
+							"y": 34,
+							"value": "mail.[domain]"
+						},
+						{
+							"x": 48,
+							"subX": 65,
+							"y": 38,
+							"value": "mail.[domain]"
+						}
+					]
 				},
 				{
-					"title": "Stap 6: certificaat accepteren",
-					"desc": "Om het certificaat te accepteren moet u de <span class='text-primary'>gebruikers gegevens</span> van uw mac account invoeren."
+					"title": "<span>Stap 6:</span> certificaat accepteren",
+					"desc": "Om het certificaat te accepteren moet u de <span>gebruikers gegevens</span> van uw mac account invoeren.",
+					"tooltip": [
+						{
+							"x": 49,
+							"subX": 10,
+							"y": 29,
+							"subY": 70,
+							"value": "Gebruikersnaam van de Mac"
+						},
+						{
+							"x": 49,
+							"subX": 10,
+							"y": 33,
+							"subY": 40,
+							"value": "Wachtwoord van de Mac"
+						}
+					]
 				},
 				{
-					"title": "Stap 7: Uw bent klaar",
-					"desc": "De mail is nu ingesteld, klik op <span class='text-primary'>gereed</span> om de mail te gebruiken."
+					"title": "<span>Stap 7:</span> u bent klaar",
+					"desc": "De mail is nu ingesteld, klik op <span>gereed</span> om de mail te gebruiken."
 				}
 			]
 		},
@@ -153,52 +333,156 @@
 			"grid": [12,12],
 			"tutorial": [
 				{
-					"title": "Stap 1",
-					"desc": "step 1"
+					"title": "<span>Stap 1:</span> open het configuratiescherm",
+					"desc": "Ga naar <span>start</span> en typ <span>configuratiescherm</span> en klik naar het de app <span>configuratiescherm</span>."
 				},
 				{
-					"title": "Stap 2",
-					"desc": "step 1"
+					"title": "<span>Stap 2:</span> open e-mail instellingen",
+					"desc": "Klik op <span>E-mail</span>"
 				},
 				{
-					"title": "Stap 3",
-					"desc": "step 1"
+					"title": "<span>Stap 3:</span> accounts openen",
+					"desc": "Klik op de knop <span>E-mailaccounts...</span>"
 				},
 				{
-					"title": "Stap 4",
-					"desc": "step 1"
+					"title": "<span>Stap 4:</span> account toevoegen",
+					"desc": "Klik op de knop <span>Nieuw...</span>"
 				},
 				{
-					"title": "Stap 5",
-					"desc": "step 1"
+					"title": "<span>Stap 5:</span> account type",
+					"desc": "Selecteer <span>Handmatige instelling of extra servertypen</span> en druk op de knop <span>Volgende</span>."
 				},
 				{
-					"title": "Stap 6",
-					"desc": "step 1"
+					"title": "<span>Stap 6:</span> verbindingstype",
+					"desc": "Selecteer <span>POP of IMAP</span> en klik op de knop <span>Volgende</span>."
 				},
 				{
-					"title": "Stap 7",
-					"desc": "step 1"
+					"title": "<span>Stap 7:</span> uw gegevens",
+					"desc": "Neem de <span>gegevens</span> hieronder over en klik op <span>Meer instellingen...</span>.",
+					"tooltip": [
+						{
+							"x": 34,
+							"subX": 35,
+							"y": 35,
+							"subY": 50,
+							"value": "Vul uw naam in"
+						},
+						{
+							"x": 34,
+							"subX": 35,
+							"y": 38,
+							"subY": 55,
+							"value": "[email]"
+						},
+						{
+							"x": 34,
+							"subX": 35,
+							"y": 47,
+							"subY": 75,
+							"value": "mail.[domain]"
+						},
+						{
+							"x": 34,
+							"subX": 35,
+							"y": 50,
+							"subY": 90,
+							"value": "mail.[domain]"
+						},
+						{
+							"x": 34,
+							"subX": 35,
+							"y": 57,
+							"subY": 0,
+							"value": "[email]"
+						},
+						{
+							"x": 34,
+							"subX": 35,
+							"y":60,
+							"subY": 15,
+							"value": "Vul uw wachtwoord in"
+						}
+					]
 				},
 				{
-					"title": "Stap 8",
-					"desc": "step 1"
+					"title": "<span>Stap 8:</span> uitgaand verkeer",
+					"desc": "Klik op het blad <span>Server voor uitgaande e-mail</span>.<br>Neem de <span>gekozen opties</span> hieronder over"
 				},
 				{
-					"title": "Stap 9",
-					"desc": "step 1"
+					"title": "<span>Stap 9:</span> geavanceerd",
+					"desc": "Klik op het blad <span>Geavanceerd</span>.<br>Neem de <span>gegevens</span> hieronder over en klik op <span>Ok</span>",
+					"tooltip": [
+						{
+							"x": 44,
+							"subX": 70,
+							"y": 31,
+							"subY": 50,
+							"value": "993"
+						},
+						{
+							"x": 44,
+							"subX": 70,
+							"y": 37,
+							"subY": 55,
+							"value": "465"
+						}
+					]
 				},
 				{
-					"title": "Stap 10",
-					"desc": "step 1"
+					"title": "<span>Stap 10:</span> gegevens controle",
+					"desc": "Nu krijgt u weer terug op het scherm van <span>stap 7</span> te zien.<br>Klik nu op de knop <span>Volgende</span>.",
+					"tooltip": [
+						{
+							"x": 34,
+							"subX": 35,
+							"y": 35,
+							"subY": 50,
+							"value": "Vul uw naam in"
+						},
+						{
+							"x": 34,
+							"subX": 35,
+							"y": 38,
+							"subY": 55,
+							"value": "[email]"
+						},
+						{
+							"x": 34,
+							"subX": 35,
+							"y": 47,
+							"subY": 75,
+							"value": "mail.[domain]"
+						},
+						{
+							"x": 34,
+							"subX": 35,
+							"y": 50,
+							"subY": 90,
+							"value": "mail.[domain]"
+						},
+						{
+							"x": 34,
+							"subX": 35,
+							"y": 57,
+							"subY": 0,
+							"value": "[email]"
+						},
+						{
+							"x": 34,
+							"subX": 35,
+							"y":60,
+							"subY": 15,
+							"value": "Vul uw wachtwoord in"
+						}
+					]
 				},
 				{
-					"title": "Stap 11",
-					"desc": "step 1"
+					"title": "<span>Stap 11:</span> verbinding testen",
+					"desc": "Het email programma zal de <span>verbinding testen</span>.<br>Is dit voltooid dan kunt u op de knop <span>Sluiten</span> klikken"
 				},
 				{
-					"title": "Stap 12",
-					"desc": "step 1"
+					"title": "<span>Stap 12:</span> u bent klaar",
+					"desc": "Klik op de knop <span>Voltooien</span>.<br><small>Alle overige schermen kunt u wegklikken</small>"
 				}
 			]
 		}
