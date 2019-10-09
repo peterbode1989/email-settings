@@ -51,24 +51,8 @@ $padding-screen-x: calc-size(25px);
 
 		div.overlay {
 			> div.overlay-item {
-				font-size: calc-size(20px);
-				line-height: calc-size(42px);
-
-				&:before {
-					top: 3px;
-					right: -10px;
-					bottom: 3px;
-					left: -5px;
-				}
-
-				&[class*="spam"] {
-					&:after {
-						top: 0;
-						right: -5px;
-						bottom: 0;
-						left: -5px;
-					}
-				}
+				font-size: calc-size(18px);
+				line-height: calc-size(24px);
 			}
 		}
 
@@ -169,6 +153,13 @@ $padding-screen-x: calc-size(25px);
 			height: ($device-size-y - ($padding-screen-y * 2));
 			width: ($device-size-x - ($padding-screen-x * 2));
 
+			div.overlay {
+				> div.overlay-item {
+					font-size: calc-size(16px);
+					line-height: calc-size(22px);
+				}
+			}
+
 			.slick-dots {
 				bottom: calc-size(-125px);
 			}
@@ -219,6 +210,13 @@ $padding-screen-x: calc-size(25px);
 		.device-content {
 			height: ($device-size-y - ($padding-screen-y * 2));
 			width: ($device-size-x - ($padding-screen-x * 2));
+
+			div.overlay {
+				> div.overlay-item {
+					font-size: calc-size(14px);
+					line-height: calc-size(24px);
+				}
+			}
 
 			.slick-dots {
 				bottom: calc-size(-100px);

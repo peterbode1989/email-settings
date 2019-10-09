@@ -5,3 +5,14 @@
 .btn {
 	transition: all .25s ease-in-out!important;
 }
+
+h1.step_title,
+p.step_desc {
+	span {
+		color: theme-color('primary');
+	}
+
+	small {
+		font-style: italic;
+	}
+}

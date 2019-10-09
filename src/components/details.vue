@@ -6,7 +6,7 @@
 					<div
 						v-for="(step, index) in device.tutorial"
 						v-bind:key="index"
-						v-html="'<h1>' + step.title + '</h1><p>' + step.desc + '</p>'"
+						v-html="'<h1 class=\'step_title\'>' + step.title + '</h1><p class=\'step_desc\'>' + step.desc + '</p>'"
 					></div>
 				</slick>
 			</b-col>
@@ -68,6 +68,7 @@ export default {
 			},
 			slickOptionsText: {
 				slidesToShow: 1,
+				// initialSlide: 8, // Used for debugging
 				dots: false,
 				arrows: true,
 				infinite: false,
@@ -81,7 +82,7 @@ export default {
 			},
 			slickOptionsDevice: {
 				slidesToShow: 1,
-				// initialSlide: 5, // Used for debugging
+				// initialSlide: 8, // Used for debugging
 				dots: true,
 				arrows: true,
 				infinite: false,
@@ -109,7 +110,6 @@ export default {
 		this.address = { name, domain };
 
 		var elms = document.getElementsByClassName('overlay-item');
-		console.log(elms);
 
 		for (let elm of elms) {
 			let str = '';
