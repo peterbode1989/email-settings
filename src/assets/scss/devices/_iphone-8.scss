@@ -40,7 +40,7 @@ $padding-screen-x: calc-size(22px);
 	.device-content {
 		border: 2px solid #222;
 		border-radius: 4px;
-		height: ($device-size-y - ($padding-screen-y * 2));
+		height: ($device-size-y - ($padding-screen-y * 2) - 1px);
 		width: ($device-size-x - ($padding-screen-x * 2));
 
 		div.overlay {
@@ -217,7 +217,7 @@ $padding-screen-x: calc-size(22px);
 		@return new-size($px, $baseY, $device-size-y);
 	}
 	
-	$padding-screen-y: calc-size(102px);
+	$padding-screen-y: calc-size(103px);
 	$padding-screen-x: calc-size(22px);
 
 	.device-iphone-8 {
@@ -231,12 +231,12 @@ $padding-screen-x: calc-size(22px);
 
 		// 1334-by-750-pixel resolution
 		.device-content {
-			height: ($device-size-y - ($padding-screen-y * 2));
+			height: ($device-size-y - ($padding-screen-y * 2) - 1px);
 			width: ($device-size-x - ($padding-screen-x * 2));
 
 			div.overlay {
 				> div.overlay-item {
-					font-size: calc-size(20px);
+					font-size: calc-size(16px);
 					line-height: calc-size(42px);
 				}
 			}

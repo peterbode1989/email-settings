@@ -23,7 +23,7 @@
 								>
 									<img
 										class="img-fluid"
-										v-bind:src="'/assets/img/devices/' + device.slug + '/slide-' + (index + 1) + '.jpg'"
+										v-bind:src="'/assets/devices/' + device.slug + '/slide-' + (index + 1) + '.jpg'"
 										v-bind:alt="'Stap '+(index + 1)"
 									/>
 									<div v-if="step.tooltip" class="overlay">
@@ -40,12 +40,7 @@
 							</slick>
 						</div>
 					</div>
-					<div class="device-stripe"></div>
-					<div class="device-header"></div>
-					<div class="device-sensors"></div>
-					<div class="device-btns"></div>
-					<div class="device-power"></div>
-					<div class="device-home"></div>
+					<div class="device-stripe"></div><div class="device-header"></div><div class="device-sensors"></div><div class="device-btns"></div><div class="device-power"></div><div class="device-home"></div>
 				</div>
 			</b-col>
 		</b-row>
@@ -68,7 +63,7 @@ export default {
 			},
 			slickOptionsText: {
 				slidesToShow: 1,
-				// initialSlide: 8, // Used for debugging
+				// initialSlide: 9, // Used for debugging
 				dots: false,
 				arrows: true,
 				infinite: false,
@@ -82,7 +77,7 @@ export default {
 			},
 			slickOptionsDevice: {
 				slidesToShow: 1,
-				// initialSlide: 8, // Used for debugging
+				// initialSlide: 9, // Used for debugging
 				dots: true,
 				arrows: true,
 				infinite: false,

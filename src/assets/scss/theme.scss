@@ -24,7 +24,7 @@ body {
 	justify-content: center;
 	flex-direction: column;
 
-	background-image: url('../../../public/assets/img/background_body.svg');
+	background-image: url('../../../public/assets/background_body.svg');
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
@@ -42,7 +42,7 @@ body {
 			background-color: #fff;
 
 			> div.container {
-				background-image: url('../../../public/assets/img/background_device.svg');
+				background-image: url('../../../public/assets/background_device.svg');
 				background-size: contain;
 				background-position: center;
 				background-repeat: no-repeat;
@@ -78,15 +78,15 @@ body {
 						}
 	
 						&.phone {
-							background-image: url('../../../public/assets/img/icons/phone-icon.svg');
+							background-image: url('../../../public/assets/icons/phone-icon.svg');
 						}
 
 						&.tablet {
-							background-image: url('../../../public/assets/img/icons/tablet-icon.svg');
+							background-image: url('../../../public/assets/icons/tablet-icon.svg');
 						}
 	
 						&.laptop {
-							background-image: url('../../../public/assets/img/icons/laptop-icon.svg');
+							background-image: url('../../../public/assets/icons/laptop-icon.svg');
 	
 							> .device-type-icon {
 								margin-top: 13px;

@@ -45,7 +45,7 @@ $padding-screen-x: calc-size(18px);
 		width: ($device-size-x - ($padding-screen-x * 2));
 
 		.slick-dots {
-			bottom: calc-size(-135px);
+			bottom: calc-size(-170px);
 		}
 	}
 
@@ -187,7 +187,7 @@ $padding-screen-x: calc-size(18px);
 }
 
 @media screen and (min-width: 1200px) {
-	$device-size-x: 360px;
+	$device-size-x: 420px;
 	$device-size-y: ($device-size-x * $device-multi-y);
 
 	@function calc-size($px) {
@@ -210,8 +210,15 @@ $padding-screen-x: calc-size(18px);
 			height: ($device-size-y - ($padding-screen-y * 2));
 			width: ($device-size-x - ($padding-screen-x * 2));
 
+			div.overlay {
+				> div.overlay-item {
+					font-size: calc-size(14px);
+					line-height: calc-size(32px);
+				}
+			}
+
 			.slick-dots {
-				bottom: calc-size(-135px);
+				bottom: calc-size(-115px);
 			}
 		}
 	
