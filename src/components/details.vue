@@ -63,7 +63,7 @@ export default {
 			},
 			slickOptionsText: {
 				slidesToShow: 1,
-				// initialSlide: 6, // Used for debugging
+				// initialSlide: 9, // Used for debugging
 				dots: false,
 				arrows: true,
 				infinite: false,
@@ -77,7 +77,7 @@ export default {
 			},
 			slickOptionsDevice: {
 				slidesToShow: 1,
-				// initialSlide: 6, // Used for debugging
+				// initialSlide: 9, // Used for debugging
 				dots: true,
 				arrows: true,
 				infinite: false,

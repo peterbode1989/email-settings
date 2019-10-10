@@ -281,33 +281,135 @@
 		{
 			"id": 3,
 			"name": "Android",
-			"slug": "",
+			"slug": "android",
 			"frame": "device-google-pixel device-blue",
 			"type": "phone",
 			"icon": "android-brands.svg",
 			"grid": [4,8],
 			"tutorial": [
 				{
-					"title": "Stap 1",
-					"desc": "step 1",
+					"title": "<span>Stap 1:</span> open gmail",
+					"desc": "Open <span>Gmail</span> door op het icoontje te drukken."
+				},
+				{
+					"title": "<span>Stap 2:</span> account toevoegen",
+					"desc": "Druk vervolgens op <span>Een e-mailadres toevoegen</span>."
+				},
+				{
+					"title": "<span>Stap 3:</span> account soort",
+					"desc": "Kies hier voor de optie <span>Overig</span>."
+				},
+				{
+					"title": "<span>Stap 4:</span> e-mailadres",
+					"desc": "U dient hier uw <span>e-mailadres</span> in te voeren. U kunt de <span>gegevens overnemen</span> zoals wij ze al voor u hebben ingevoerd.",
 					"tooltip": [
 						{
-							"x": 19,
-							"y": 48,
-							"value": "Wachtwoorden en accounts"
+							"x": 7,
+							"subX": 75,
+							"y": 26,
+							"subY": 90,
+							"value": "[email]"
 						}
 					]
 				},
 				{
-					"title": "Stap 1",
-					"desc": "step 1",
+					"title": "<span>Stap 5:</span> account type",
+					"desc": "Kies hier voor de optie <span>Persoonlijk (IMAP)</span>."
+				},
+				{
+					"title": "<span>Stap 6:</span> wachtwoord",
+					"desc": "U dient hier uw <span>wachtwoord</span> in te voeren.",
 					"tooltip": [
 						{
-							"x": 19,
-							"y": 48,
-							"value": "Wachtwoorden en accounts"
+							"x": 7,
+							"subX": 75,
+							"y": 26,
+							"subY": 90,
+							"value": "Vul uw wachtwoord in"
 						}
 					]
+				},
+				{
+					"title": "<span>Stap 7:</span> inkomende gegevens",
+					"desc": "Neem de gegevens over zoals wij ze voor u hebben <span>ingevoerd</span>.",
+					"tooltip": [
+						{
+							"x": 7,
+							"subX": 75,
+							"y": 30,
+							"subY": 90,
+							"value": "[email]"
+						},
+						{
+							"x": 7,
+							"subX": 75,
+							"y": 42,
+							"subY": 25,
+							"value": "Vul uw wachtwoord in"
+						},
+						{
+							"x": 7,
+							"subX": 75,
+							"y": 53,
+							"subY": 90,
+							"value": "mail.[domain]"
+						}
+					]
+				},
+				{
+					"title": "<span>Stap 8:</span> beveiliging",
+					"desc": "In sommige gevallen krijgt u de melding <span>Certificaat ongeldig</span>. Door op geavanceerd te klikken kunt u deze <span>accepteren</span>."
+				},
+				{
+					"title": "<span>Stap 9:</span> uitgaande gegevens",
+					"desc": "Neem de gegevens over zoals wij ze voor u hebben <span>ingevoerd</span>.",
+					"tooltip": [
+						{
+							"x": 7,
+							"subX": 75,
+							"y": 37,
+							"subY": 65,
+							"value": "[email]"
+						},
+						{
+							"x": 7,
+							"subX": 75,
+							"y": 49,
+							"subY": 0,
+							"value": "Vul uw wachtwoord in"
+						},
+						{
+							"x": 7,
+							"subX": 75,
+							"y": 60,
+							"subY": 75,
+							"value": "mail.[domain]"
+						}
+					]
+				},
+				{
+					"title": "<span>Stap 10:</span> persoonlijke gegevens",
+					"desc": "Deze invoer in <span>volledig vrijblijvend</span>. De gegevens die u hier invuld worden gebruikt <span>onder aan</span> mailtjes die u verstuurd.",
+					"tooltip": [
+						{
+							"x": 7,
+							"subX": 75,
+							"y": 29,
+							"subY": 75,
+							"value": "[email]"
+						},
+						{
+							"x": 7,
+							"subX": 75,
+							"y": 41,
+							"subY": 40,
+							"value": "Vul uw naam in"
+						}
+					]
+				},
+				{
+					"title": "<span>Stap 11:</span> succes",
+					"desc": "Heel veel plezier met u <span>nieuwe mail account</span>."
 				}
 			]
 		},
