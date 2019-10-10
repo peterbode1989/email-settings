@@ -61,7 +61,7 @@
 							"x": 30,
 							"subX": 20,
 							"y": 28,
-							"subY": 20,
+							"subY": 40,
 							"value": "[email]"
 						},
 						{
@@ -95,7 +95,7 @@
 							"x": 30,
 							"subX": 30,
 							"y": 29,
-							"subY": 30,
+							"subY": 50,
 							"value": "Vul uw naam in"
 						},
 						{
@@ -115,7 +115,7 @@
 							"x": 30,
 							"subX": 30,
 							"y": 47,
-							"subY": 60,
+							"subY": 70,
 							"value": "mail.[domain]"
 						},
 						{

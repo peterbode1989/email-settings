@@ -23,7 +23,7 @@
 								>
 									<img
 										class="img-fluid"
-										v-bind:src="'/assets/img/devices/' + device.slug + '/slide-' + (index + 1) + '.jpg'"
+										v-bind:src="'/assets/devices/' + device.slug + '/slide-' + (index + 1) + '.jpg'"
 										v-bind:alt="'Stap '+(index + 1)"
 									/>
 									<div v-if="step.tooltip" class="overlay">

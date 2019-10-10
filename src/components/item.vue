@@ -1,7 +1,7 @@
 <template>
 	<b-card class="device shadow">
 		<div class="device-type" v-bind:class="device.type">
-			<img class="device-type-icon" v-bind:src="'./assets/img/icons/' + device.icon">
+			<img class="device-type-icon" v-bind:src="'./assets/icons/' + device.icon">
 		</div>
 		<h4 class="py-3">
 			<span>{{device.name}}</span>
