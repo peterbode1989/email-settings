@@ -7,7 +7,10 @@
 			"frame": "device-iphone-8",
 			"type": "phone",
 			"icon": "apple-brands.svg",
-			"grid": [4,8],
+			"grid": [
+				4,
+				8
+			],
 			"tutorial": [
 				{
 					"title": "<span>Stap 1:</span> open instellingen",
@@ -93,7 +96,7 @@
 							"subX": 0,
 							"y": 49,
 							"subY": 60,
-							"value": "mail.[domain]"
+							"value": "nugtr.email"
 						},
 						{
 							"x": 37,
@@ -114,7 +117,7 @@
 							"subX": 0,
 							"y": 75,
 							"subY": 0,
-							"value": "mail.[domain]"
+							"value": "nugtr.email"
 						},
 						{
 							"x": 37,
@@ -149,7 +152,10 @@
 			"frame": "device-ipad-pro device-gold",
 			"type": "tablet",
 			"icon": "apple-brands.svg",
-			"grid": [4,8],
+			"grid": [
+				4,
+				8
+			],
 			"tutorial": [
 				{
 					"title": "<span>Stap 1:</span> open instellingen",
@@ -230,7 +236,7 @@
 							"subX": 30,
 							"y": 47,
 							"subY": 70,
-							"value": "mail.[domain]"
+							"value": "nugtr.email"
 						},
 						{
 							"x": 34,
@@ -250,7 +256,7 @@
 							"subX": 30,
 							"y": 66,
 							"subY": 15,
-							"value": "mail.[domain]"
+							"value": "nugtr.email"
 						},
 						{
 							"x": 34,
@@ -285,7 +291,10 @@
 			"frame": "device-google-pixel device-blue",
 			"type": "phone",
 			"icon": "android-brands.svg",
-			"grid": [4,8],
+			"grid": [
+				4,
+				8
+			],
 			"tutorial": [
 				{
 					"title": "<span>Stap 1:</span> open gmail",
@@ -352,7 +361,7 @@
 							"subX": 75,
 							"y": 53,
 							"subY": 90,
-							"value": "mail.[domain]"
+							"value": "nugtr.email"
 						}
 					]
 				},
@@ -383,7 +392,7 @@
 							"subX": 75,
 							"y": 60,
 							"subY": 75,
-							"value": "mail.[domain]"
+							"value": "nugtr.email"
 						}
 					]
 				},
@@ -420,7 +429,10 @@
 			"frame": "device-macbook-pro",
 			"type": "laptop",
 			"icon": "apple-brands.svg",
-			"grid": [12,12],
+			"grid": [
+				12,
+				12
+			],
 			"tutorial": [
 				{
 					"title": "<span>Stap 1:</span> open de app",
@@ -485,13 +497,13 @@
 							"x": 48,
 							"subX": 65,
 							"y": 34,
-							"value": "mail.[domain]"
+							"value": "nugtr.email"
 						},
 						{
 							"x": 48,
 							"subX": 65,
 							"y": 38,
-							"value": "mail.[domain]"
+							"value": "nugtr.email"
 						}
 					]
 				},
@@ -503,13 +515,13 @@
 							"x": 48,
 							"subX": 65,
 							"y": 34,
-							"value": "mail.[domain]"
+							"value": "nugtr.email"
 						},
 						{
 							"x": 48,
 							"subX": 65,
 							"y": 38,
-							"value": "mail.[domain]"
+							"value": "nugtr.email"
 						}
 					]
 				},
@@ -546,7 +558,10 @@
 			"frame": "device-surface-book",
 			"type": "laptop",
 			"icon": "windows-brands.svg",
-			"grid": [12,12],
+			"grid": [
+				12,
+				12
+			],
 			"tutorial": [
 				{
 					"title": "<span>Stap 1:</span> open het configuratiescherm",
@@ -595,14 +610,14 @@
 							"subX": 35,
 							"y": 47,
 							"subY": 75,
-							"value": "mail.[domain]"
+							"value": "nugtr.email"
 						},
 						{
 							"x": 34,
 							"subX": 35,
 							"y": 50,
 							"subY": 90,
-							"value": "mail.[domain]"
+							"value": "nugtr.email"
 						},
 						{
 							"x": 34,
@@ -614,7 +629,7 @@
 						{
 							"x": 34,
 							"subX": 35,
-							"y":60,
+							"y": 60,
 							"subY": 15,
 							"value": "Vul uw wachtwoord in"
 						}
@@ -667,14 +682,14 @@
 							"subX": 35,
 							"y": 47,
 							"subY": 75,
-							"value": "mail.[domain]"
+							"value": "nugtr.email"
 						},
 						{
 							"x": 34,
 							"subX": 35,
 							"y": 50,
 							"subY": 90,
-							"value": "mail.[domain]"
+							"value": "nugtr.email"
 						},
 						{
 							"x": 34,
@@ -686,7 +701,7 @@
 						{
 							"x": 34,
 							"subX": 35,
-							"y":60,
+							"y": 60,
 							"subY": 15,
 							"value": "Vul uw wachtwoord in"
 						}
